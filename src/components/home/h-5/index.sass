@@ -1,0 +1,145 @@
+.home-project
+    padding: 4rem 0
+    background: #f5f5f5
+    .project-wrapper
+        .project-title
+        .project-content
+            p
+                padding: 2rem 0 2.5rem
+            .viewmore
+                display: block
+                width: 190px
+                height: 50px
+                display: flex
+                justify-content: center
+                align-items: center
+                background: #ffffff
+                color: #333333
+                text-transform: uppercase
+                font-weight: bold
+                em 
+                    margin-left: 10px
+                    font-size: 20px
+                z-index: 1
+                position: relative
+                outline: none
+                border: none
+                &:before
+                    content: ''
+                    z-index: -1
+                    position: absolute
+                    top: 0
+                    bottom: 0
+                    left: 0
+                    right: 0
+                    background-color: #8c2004
+                    color: #ffffff
+                    transform-origin: center left
+                    transform: scaleX(0)
+                    transition: transform 0.4s ease-in-out
+                &:hover
+                    cursor: pointer
+                    color: #ffffff
+                    &:before
+                        transform-origin: center right
+                        transform: scaleX(1)
+
+        @media (max-width: 1025px)
+            .project-content
+                padding-bottom: 1rem
+        .img 
+            height: 380px
+            width: auto
+            position: relative
+            text-align: center
+            margin-bottom: 2.5rem
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+            .title
+                width: 100%
+                text-align: center
+                position: absolute
+                bottom: 2rem
+                a
+                    font-size: 24px
+                    color: #ffffff
+                    text-transform: uppercase
+                    &:hover
+                        background: #8c2004
+                        color: #ffffff
+                        transition: all .3s ease-in-out
+        .project-slider
+            position: relative
+            .swiper-container
+                .swiper-wrapper
+                    .swiper-slide 
+                        position: relative
+                        .img 
+                            height: 190px
+                            width: 273px
+                            display: block
+                            overflow: hidden
+                            img 
+                                transition: transform .2s
+                                overflow: hidden
+                                height: 100% 
+                                width: 100%
+                                object-fit: none
+                                &:hover
+                                    transform: scale(1.3)
+                                    overflow: hidden
+                        .project-title
+                            width: 100%
+                            position: absolute
+                            bottom: 4rem
+                            text-align: center
+                            font-size: 14px
+                            text-transform: uppercase
+                            color: #ffffff
+                            &:hover 
+                                text-decoration: underline
+            .project-button-next
+                position: absolute
+                width: 35px
+                height: 35px
+                display: flex
+                justify-content: center
+                align-items: center
+                bottom: 50%
+                transform: translateY(50%)
+                right: -3rem
+                border: 1.5px solid #999999
+                outline: none
+                em 
+                    color: #999999
+                    font-size: 25px
+                    font-weight: bold
+                &:hover
+                    background: #8c2004
+                    color: #ffffff
+                    transition: all .3s ease-in-out
+            .project-button-prev
+                position: absolute
+                width: 35px
+                height: 35px
+                display: flex
+                justify-content: center
+                align-items: center
+                bottom: 50%
+                transform: translateY(50%)
+                left: -3rem
+                border: 1.5px solid #999999
+                outline: none
+                em 
+                    color: #999999
+                    font-size: 25px
+                    font-weight: bold
+                &:hover
+                    background: #8c2004
+                    color: #ffffff
+                    transition: all .3s ease-in-out
+
+
+
