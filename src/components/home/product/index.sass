@@ -1,0 +1,104 @@
+.home-product
+    background: #292e35
+    padding: 4rem 0
+    .product-wrapper
+        .product-title
+            padding-bottom: 4rem 
+            h1 
+                color: #ffffff!important
+        .product-slider1
+            border-bottom: 1px solid #999999
+            padding-bottom: 25px
+            margin-bottom: 2rem
+            .item1
+                text-align: center
+                .img
+                    display: block
+                    height: 200px
+                    width: auto
+                    img 
+                        height: 100%
+                        object-fit: none
+                .product-title 
+                    color: #999999
+                    font-size: 24px
+                    text-transform: uppercase
+                &:hover 
+                    .product-title
+                        color: #8c2004
+                        transition: all .3s ease-in-out
+            @media (max-width: 1025px)
+                .item1
+                    flex: 0 0 100%
+                    max-width: 100%
+                    padding-bottom: 1rem
+                
+        .product-slider2
+            position: relative
+            .swiper-container
+                .swiper-wrapper
+                    .swiper-slide 
+                        text-align: center
+                        .img
+                            height: 160px
+                            width: auto
+                            display: block
+                            img 
+                                height: 100%
+                                object-fit: cover
+                        .product-title 
+                            color: #999999
+                            font-size: 18px
+                            text-transform: uppercase
+                        &:hover 
+                            .product-title
+                                color: #8c2004
+                                transition: all .3s ease-in-out   
+            .product-button-next
+                position: absolute
+                width: 35px
+                height: 35px
+                display: flex
+                justify-content: center
+                align-items: center
+                bottom: 50%
+                transform: translateY(50%)
+                right: -3rem
+                border: 1.5px solid #999999
+                outline: none
+                em 
+                    color: #999999
+                    font-size: 25px
+                    font-weight: bold
+                &:hover 
+                    background: #8c2004
+                    transition: all .4s ease-in-out
+            .product-button-prev
+                position: absolute
+                width: 35px
+                height: 35px
+                display: flex
+                justify-content: center
+                align-items: center
+                bottom: 50%
+                transform: translateY(50%)
+                left: -3rem
+                border: 1.5px solid #999999
+                outline: none
+                em 
+                    color: #999999
+                    font-size: 25px
+                    font-weight: bold
+                &:hover 
+                    background: #8c2004
+                    transition: all .4s ease-in-out
+            @media (max-width: 876px)
+                .product-button-next
+                    bottom: -2rem
+                    right: 44%
+                .product-button-prev
+                    bottom: -2rem
+                    left: 44%
+@media (max-width: 768px)
+    .product-wrapper
+        padding: 0rem 2rem

@@ -1,0 +1,65 @@
+// business item
+.business-page-list
+	@media screen and(max-width:1025px)
+		padding-bottom: 30px
+
+	.row
+		justify-content: center
+.business-item
+	margin-bottom: 45px
+	@media (max-width: 767.98px)
+		margin-bottom: 15px
+	.imgbox
+		overflow: hidden
+		img
+			transition: all .4s ease-out
+			width: 100%
+	h3
+		font-size: 30px
+		font-weight: 600
+		color: #333333
+		@media (max-width: 1024.98px)
+			font-size: 26px
+			color: white
+		@media (max-width: 767.98px)
+			font-size: 22px
+	p
+		font-size: 16px
+		font-weight: 400
+		color: #333333
+		line-height: 23px
+		@media (max-width: 1024.98px)
+			font-size: 15px
+			color: white
+		@media (max-width: 767.98px)
+			font-size: 14px
+	article
+		position: relative
+	.info
+		margin-top: 20px
+		min-height: 70px
+		border-left: 12px solid #f2f2f2
+		transition: all .3s cubic-bezier(.2,.5,.5,.8)
+		padding-left: 20px
+		@media (max-width: 1200px)
+			min-height: 92px
+		@media (max-width: 1024.98px)
+			min-height: 100px
+			border-left: 0
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			background-color: #8c2004
+			padding: 15px
+		
+	@media (min-width: 1025px)
+		&:hover
+			.imgbox
+				img
+					transform: scale(1.08)
+			h3
+				color: #8c2004
+				transition: all .4s ease-out
+			.info
+				border-left: 12px solid #8c2004
