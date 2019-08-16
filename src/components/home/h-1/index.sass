@@ -1,44 +1,59 @@
 .home-slider1
-    .swiper-container
-        .swiper-wrapper
-            position: relative
-            .swiper-slide
-                .img 
-                    width: auto
-                    max-height: 1084px
-                    img 
-                        width: 100%
-                        height: 100%
-                        object-fit: cover
-                    .text 
-                        position: absolute
-                        bottom: 140px
-                        display: flex
-                        justify-content: flex-end
-                        width: 100%
-                        h2 
-                            position: relative
-                            font-size: 48px
-                            color: #ffffff
-                            max-width: 600px
-                            padding: 0
-                            margin: 0
-                            &:before
-                                content: ""
-                                display: block
-                                height: 100%
-                                width: 5px
-                                background: #ffffff
-                                position: absolute
-                                left: -50px
-                                top: 0
-@media (max-width: 992px)
-    .home-slider1
-        .img
-            height: 680px
-            .text
-                justify-content: center
-                h2 
-                    font-size: 35px
+	.swiper-container
+		.swiper-wrapper
+			position: relative
+		.swiper-slide
+			.img 
+				width: auto
+				max-height: 1084px
+				img 
+					width: 100%
+					height: 100%
+					object-fit: cover
+			.text 
+				position: absolute
+				bottom: 140px
+				display: flex
+				justify-content: flex-end
+				width: 100%
+				h2 
+					position: relative
+					font-size: 48px
+					color: #ffffff
+					max-width: 600px
+					padding: 0
+					margin: 0
+					&:before
+						content: ""
+						display: block
+						height: 100%
+						width: 5px
+						background: #ffffff
+						position: absolute
+						left: -50px
+						top: 0
+			@media (max-width:1360px)
+				.img
+					height: 680px
+				.text
+					justify-content: center
+					h2 
+						font-size: 35px
+			@media (max-width:1025px)
+				.img
+					height: 500px
+				.text
+					h2 
+						font-size: 30px
+			@media (max-width:576px)
+				.img
+					height: 400px
+				.text
+					left: 0
+					h2 
+						margin: 0 0 0 16px
+						font-size: 26px
+						&:before
+							left: -16px
 
 
