@@ -229,8 +229,8 @@ function mappingSearch() {
     selector: ".search-wrapper-temp",
     mobileWrapper: ".mobile-wrapper",
     mobileMethod: "appendTo",
-    desktopWrapper: ".header-wrapper-right",
-    desktopMethod: "appendTo",
+    desktopWrapper: ".language-wrapper",
+    desktopMethod: "insertBefore",
     breakpoint: 1025
   }).watch();
 }
@@ -240,7 +240,7 @@ function mapppingLink() {
     mobileWrapper: ".mobile-wrapper",
     mobileMethod: "appendTo",
     desktopWrapper: ".language-wrapper",
-    desktopMethod: "insetAfter",
+    desktopMethod: "insertAfter",
     breakpoint: 1025
   }).watch();
 }
