@@ -1,0 +1,9 @@
+extends _layout.pug
+
+block var
+	- var title = 'Gallery'
+	- var bodyClass = 'Gallery-page'
+
+block main
+	include ../components/gallery/gallery-nav/index
+	include ../components/gallery/gallery/index

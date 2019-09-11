@@ -1,9 +1,11 @@
 .about-sunshine
     padding: 4rem 0 
+    background-size: unset!important
+    background-position: unset!important
     .about-wrapper
-        .about-title
-            .title-h1
-                padding-bottom: 2rem
+       
+        .title-h1-grey
+            padding-bottom: 2rem
         .about-content
             p 
                 color: #333333
@@ -33,13 +35,29 @@
                         flex: 0 0 100%
                         max-width: 100%
                         flex-direction: column
-        .img 
-            width: auto
-            height: 350px
-            img 
-                width: 100%
-                height: 100%
-                object-fit: cover
+        .box-img 
+            .img 
+                width: auto
+                height: 350px
+                position: relative
+                &:after 
+                    position: absolute
+                    content: ""
+                    display: block
+                    width: 100%
+                    height: 1252px
+                    top: -155px
+                    
+                    right: 0
+                    background: #f5f5f5
+                    @media (max-width: 1025px)
+                        display: none
+                img 
+                    position: relative
+                    z-index: 9
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
 @media (max-width: 768px)
     .about-wrapper
         padding: 0rem 2rem

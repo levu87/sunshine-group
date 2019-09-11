@@ -75,9 +75,8 @@ header
 					span,a
 						color: #ffffff
 						z-index: 119
-						&:after
-							transform: rotate(-180deg)
-					.nav-sub
+						&:after	
+					.nav-sub			
 						left: -16px
 						top: -10px
 						padding: 40px 30px 0 30px 
@@ -85,6 +84,8 @@ header
 						filter: none
 						background: rgba(#000000,.8)
 						transition: opacity .3s ease, z-index .3s ease .1s
+						
+					
 						li
 							display: flex
 							justify-content: center
@@ -100,12 +101,12 @@ header
 								display: flex
 								justify-content: center
 								align-items: center
-								color: #ffffff
+								color: #929598
 								&:after
 									display: none
 							&:hover
 								a
-									color: #cccccc
+									color: #ffffff
 				span,a
 					position: relative
 				span
@@ -168,7 +169,6 @@ header
 					text-decoration: none
 					color: #cccccc
 					font-weight: 400
-					display: block
 				span
 					position: relative
 					z-index: 10
@@ -179,32 +179,45 @@ header
 			.has-sub
 				position: relative
 				display: inline-block
+				&:after
+					position: absolute
+					content: '\f140'
+					font-family: 'Material Design Icons'
+					font-size: 20px
+					right: -15px
+					top: 2px
+					color: #cccccc
+					transition: transform .3s ease
 				.nav-sub
 					z-index: 10
 					padding: 60px 0 0
+					pointer-events: none
 					li
 						line-height: 50px
 						a
 							display: block
 							padding: 0 20px
 							width: 100%
+							color: #929598
 				&:hover
 					span,a
 						color: #ffffff
 						z-index: 14
-						&:after
-							z-index: 11
-							transform: rotate(-180deg)
-							color: #ffffff
+					&:after
+						z-index: 11
+						color: #ffffff
 					.nav-sub
 						background: rgba(#000000,.8)
 						opacity: 1
 						filter: none
+						pointer-events: auto
+						transition: all .4s ease-in-out
 						transition: opacity .3s ease,z-index .3s ease .1s
 						li
 							display: block
 							a
-								color: #ffffff
+								color: #929598
+								text-transform: capitalize
 								&:after
 									display: none
 							&:hover
@@ -212,18 +225,9 @@ header
 									color: #ffffff
 				span,a
 					position: relative
-					&:after
-						position: absolute
-						content: '\f140'
-						font-family: 'Material Design Icons'
-						font-size: 20px
-						right: -10px
-						top: 2px
-						color: #cccccc
-						transition: transform .3s ease
 				span
-					&:after
-						bottom: 0
+				&:after
+					bottom: 0
 						
 				ul
 					max-height: 500px
@@ -287,8 +291,8 @@ header
 							text-align: center
 						span
 							text-align: center
-		
 	.search-wrapper-temp
+		position: relative
 		.search-toggle
 			position: relative
 			display: flex
@@ -325,60 +329,65 @@ header
 			display: block
 			justify-content: center
 			align-items: center
-			position: relative
-			bottom: 6px
-			@media screen and(max-width:1025px)
-				margin-top: 20px
-			&.active
-				input,button
-					opacity: 1
-					pointer-events: auto
-					z-index: 1
-				input
-					cursor: auto
-				button
-					cursor: pointer
+			padding-top: 25px
+			right: 0
 			input
+				background: rgba(0,0,0,.8)
 				padding: 0 16px
 				position: absolute
 				top: 0
 				height: 31px
 				right: 0
 				opacity: 0
-				cursor: none
+				cursor: pointer
 				pointer-events: none
-				background: none
+			
 				border: none
 				color: #ffffff
 				z-index: -1
 				transition: opacity .3s ease-in-out
 				border-bottom: 1px solid #ffffff
-
 				&:focus
 					outline: none
 			button
 				color: #ffffff
-				background: rgba(#000000,.9)
+				background: none
 				width: 32px
 				height: 30px
 				opacity: 0
-				cursor: none
+				cursor: pointer
 				border: none
 				pointer-events: none
-				z-index: -1
+				z-index: 1
 				position: absolute
 				top: 0
 				right: 0
 				transition: opacity .3s ease-in-out, background .3s ease-in-out
-				&:hover
-					background: #ffffff
-					em
-						color: #333333
+				// &:hover
+				// 	background: #ffffff
+				// 	em
+				// 		color: #333333
 				em
 					color: #ffffff
 					font-size: 20px
 				&:focus
 					outline: none
+			@media screen and(max-width:1025px)
+				margin-top: 20px
+		&:hover
+			.search-toggle
+				&:after 
+					display: none
+			.searchbox
+				input,button
+					opacity: 1
+					pointer-events: auto
+					z-index: 1
+					input
+						cursor: auto
+					button
+						cursor: pointer
+				
 			@media screen and(max-width:1360px)
 				border-bottom: 1px solid #ffffff
 				opacity: 1
@@ -416,8 +425,31 @@ header
 			font-weight: 400
 			border-top: 1px solid #ffffff
 			border-bottom: 1px solid #ffffff
+			position: relative
+			&::before, &::after
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				width: 2px
+				background-color: #ffffff
+				transform: scaleY(0)
+				transition: transform 0.5s ease
+			&::before
+				left: 0px
+				transform-origin: center top
+			&:hover::before
+				transform-origin: center bottom
+				transform: scaleY(1)
+			&::after
+				right: 0px
+				transform-origin: center bottom
+			&:hover::after
+				transform-origin: center top
+				transform: scaleY(1)
 			span
 				margin-left: 10px
+		
 		@media screen and(max-width:1025px)
 			margin-top: 20px
 	.mobile-toggle

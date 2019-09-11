@@ -34,47 +34,62 @@ footer
 
 	.footer-wrapper-bottom
 		padding: 3rem 0
-		position: relative
-		.nav
-			padding-bottom: 5rem
-			.title 
-				font-size: 18px
-				text-transform: uppercase
-				color: #ffffff
-				padding-bottom: 30px
-			nav
-				display: flex
-				flex-direction: column
-				max-width: 90%
-				a 
-					color: #999999
-					font-size: 12px 
-					text-shadow: 2px 2px 2px #000000
-					line-height: 24px
-					&:hover,&:active
-						color: #8c2004
-						transition: all .3s ease-in-out
-			.project
-				a 
-					font-size: 18px 
-					color: #ffffff
+		.container
+			position: relative
+			.nav
+				padding-bottom: 5rem
+				.title 
+					font-size: 18px
 					text-transform: uppercase
-					line-height: 40px
-				.button 
+					color: #ffffff
+					padding-bottom: 30px
+				nav
 					display: flex
-					.fb,.yt
-						width: 30px
-						height: 30px
-						border: 1px solid #ffffff
-						display: flex
-						justify-content: center
-						align-items: center
-						margin-right: 15px
+					flex-direction: column
+					max-width: 90%
+					a 
+						color: #999999
+						font-size: 12px 
+						text-shadow: 2px 2px 2px #000000
+						line-height: 24px
 						&:hover,&:active
-							background: #8c2004
-							transition: all 0.3s ease-in-out
-							border: none
-							
+							color: #ffffff
+							transition: all .3s ease-in-out
+				.project
+					padding: 0
+					a 
+						font-size: 18px 
+						color: #ffffff
+						text-transform: uppercase
+						line-height: 40px
+					.button 
+						display: flex
+						.fb,.yt,.in
+							width: 30px
+							height: 30px
+							border: 1px solid #ffffff
+							display: flex
+							justify-content: center
+							align-items: center
+							margin-right: 15px
+							&:hover,&:active
+								background: #8c2004
+								transition: all 0.3s ease-in-out
+								border: none
+								em 
+									color: #ffffff
+			#gotop
+				position: absolute
+				top: 0rem 
+				right: 0
+				width: 50px
+				height: 50px
+				background: #f5f5f5 
+				display: flex
+				text-align: center
+				align-items: center
+				justify-content: center
+				font-size: 35px
 		.copy-right
 			display: flex
 			align-items: center
@@ -97,6 +112,10 @@ footer
 						a 
 							font-size: 12px 
 							color: #999999
+						&:hover
+							a 
+								color: #ffffff
+								transition: all .3s ease-in-out
 					li:nth-child(2)
 						position: relative
 						&:after 
@@ -128,17 +147,6 @@ footer
 					flex: 0 0 100%
 					max-width: 100%
 					text-align: center
-		.gotop
-			position: absolute
-			top: 3rem 
-			right: 0
-			width: 50px
-			height: 50px
-			background: #f5f5f5 
-			display: flex
-			text-align: center
-			align-items: center
-			justify-content: center
-			font-size: 35px
+		
 
 			   

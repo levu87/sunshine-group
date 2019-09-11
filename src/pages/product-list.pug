@@ -1,0 +1,9 @@
+extends _layout.pug
+
+block var
+    - var title = 'Product-list'
+    - var bodyClass = 'Product-list-page'
+block main
+    include ../components/product-list1/nav-top/index
+    include ../components/product-list/index
+    

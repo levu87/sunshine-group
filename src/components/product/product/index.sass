@@ -1,0 +1,69 @@
+.product-list 
+	padding: 3.75rem 0
+	.product-wrapper
+		.top-wrap
+			padding: 0 15px
+			.title-h1-grey
+				margin-left: 2rem
+			.box-top
+				margin-bottom: 2rem
+			
+				.content 
+					p 
+						font-size: 24px
+						font-weight: 300
+						color: #666666
+				nav
+					a 
+						display: inline-block
+						position: relative
+						flex: 0 0 50%
+						transition: all .3s ease-in-out
+						margin-bottom: 24px
+						max-width: 50%
+						color: #999999
+						font-size: 14px
+						font-weight: 600
+						text-transform: uppercase
+			@media (max-width: 1025px)
+				.content 
+					padding-bottom: 2rem
+						
+		.list-item
+			.item 
+				padding-bottom: 30px
+				figure 
+					position: relative
+					.img 
+						height: 350px
+						width: auto
+						display: block
+						img 
+							width: 100%
+							height: 100%
+							object-fit: cover
+					figcaption 
+						position: absolute
+						bottom: 0
+						left: 0
+						background: #f4f4f4db
+						padding: 20px
+						width: 80%
+						h3 
+							a
+								font-size: 16px 
+								color: #333333
+								text-transform: uppercase
+						a 
+							color: #666666
+							font-size: 14px
+							text-transform: capitalize
+							&:hover
+								color: #8c0000
+				&:hover 
+					figcaption 
+						h3 
+							color: #8c0000
+							transition: all .3s ease-in-out
+	
+			

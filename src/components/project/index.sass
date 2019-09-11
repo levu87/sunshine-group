@@ -1,0 +1,223 @@
+.project 
+    padding: 3.75rem 0
+    .nav-1
+        p 
+            font-size: 18px
+            font-weight: 600
+            text-transform: uppercase
+        h1 
+            font-size: 18px
+            font-weight: 300
+        nav
+            padding-top: 50px
+            display: flex
+            flex-wrap: wrap
+            flex: 0 0 100%
+            max-width: 100%
+            a 
+                font-size: 18px
+                font-weight: 600
+                color: #999999
+                flex: 0 0 50%
+                max-width: 50%
+                margin-bottom: 24px
+                text-transform: uppercase
+                &:before 
+                    position: absolute
+                    width: 15px
+                    height: 15px
+                    background: #000000
+                    content: ''
+                    left: 0 
+                    top: 50%
+                    transform: translateY(-50%)
+                    
+                    display: none
+                    transition: all .4s ease-in-out
+                &:hover,&.active
+                    position: relative
+                    color: #000000
+                    &:before
+                        display: block
+        @media (max-width: 768px)
+            a 
+                flex: 0 0 100%
+                max-width: 100%
+            a.active 
+                flex: 0 0 100%
+                max-width: 100%
+        @media (max-width: 1024.98px)
+            nav 
+                display: none
+    .nav-2
+        padding: 1.5rem 0
+        display: none
+        p 
+            font-size: 18px
+            font-weight: 600
+            text-transform: uppercase
+        a
+            display: inline-block
+            margin-right: 2rem
+            margin-bottom: 1rem 
+            border-bottom: 1px solid #ebebeb00
+            color: #999999
+            font-size: 20px
+            text-transform: uppercase
+            &:hover 
+                border-bottom: 1px solid #ebebeb
+    .cate
+        font-size: 18px
+        font-weight: 600
+        text-transform: uppercase
+    @media (min-width: 1025px)
+        .cate 
+            display: none
+    select[data-nav]
+        display: none
+        @media (max-width: 1024.98px)
+            display: block
+            width: 100%
+            height: 40px
+            border-radius: 4px
+            border: 1px solid rgba(black,.15)
+            text-transform: capitalize
+            margin: 1rem 0
+    @media (max-width: 1024.98px)
+        .nav-2 
+            display: none
+    .project-1
+        padding-top: 2rem
+        .project-list
+            .swiper-container
+                @media (min-width: 1025px)
+                    padding: 15px
+                    margin: -15px
+                .swiper-slide
+                    position: relative
+                    z-index: 2
+                    @media (min-width: 1025px)
+                        opacity: 0
+                    .imgbox
+                        img
+                            width: 100%
+                            opacity: 1
+                    .info
+                        position: absolute
+                        left: 0
+                        right: 0
+                        bottom: 0
+                        padding: 25px
+                        background: rgb(0,0,0)
+                        background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%)
+                        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1)
+                        @media (max-width: 1024.98px)
+                            font-size: 15px
+                        h3
+                            a
+                                font-size: 24px
+                                color: white
+                                font-weight: 400
+                                @media (max-width: 1024.98px)
+                                    font-size: 19.5px
+                                @media (max-width: 767.98px)
+                                    font-size: 15px
+                    @media (min-width: 1025px)
+                        transition: all .8s linear
+                        transform: scale(0.7)
+                        box-shadow: 0 5px 15px rgba(black,.3)
+                        &.swiper-slide-next
+                            z-index: 6
+                            transform: scale(.85)
+                            opacity: 1
+                        &.swiper-slide-prev
+                            z-index: 6
+                            transform: scale(.85)
+                            opacity: 1
+                        &.swiper-slide-active
+                            z-index: 8
+                            transform: scale(1)
+                            opacity: 1
+                        &.swiper-slide-nth-next-2
+                            z-index: 4
+                            transform: scale(.7)
+                            opacity: 1
+                        &.swiper-slide-nth-prev-2
+                            z-index: 4
+                            transform: scale(.7)
+                            opacity: 1
+            .swiper-pagination
+                margin-top: 30px
+                display: flex
+                justify-content: center
+                left: 0
+                right: 0
+                position: static
+                span
+                    width: 13px
+                    height: 13px
+                    border: 2px solid #333333
+                    opacity: 1
+                    border-radius: 0
+                    margin: 0 5px
+                    background: none
+                    position: static
+                    &.swiper-pagination-bullet-active
+                        background: #333333
+            .swiper-nav
+                .btn-prev,.btn-next
+                    position: absolute
+                    top: 50%
+                    transform: translateY(-50%)
+                    font-size: 60px
+                    color: #ffffff
+
+                    z-index: 10
+                    cursor: pointer
+                    text-shadow: 0 0 20px rgba(black,.5)
+                    outline: none
+                    @media (max-width: 767.98px)
+                        font-size: 28px
+                .btn-prev
+                    left: 120px
+                    @media (max-width: 767.98px)
+                        left: 30px
+                .btn-next
+                    right: 120px
+                    @media (max-width: 767.98px)
+                        right: 30px
+            .pages
+                margin-top: 2rem
+                .modulepager
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    padding-bottom: 50px
+                    ul
+                        padding: 0
+                        margin: 0
+                        position: relative
+                        li
+                            display: inline-block
+                            padding: 0 10px
+                            &:last-child()
+                                position: relative
+                                &:after
+                                    font-family: 'Material Design Icons'
+                                    content: '\f142'
+                                    font-size: 20px
+                            &.active
+                                a,span
+                                    color: #ffffff
+                                    background: #b72600
+                                    border: none
+                            span,a
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                width: 32px
+                                height: 32px
+                                border: 2px solid #e1e1e1
+                                text-decoration: none
+                                color: #e1e1e1
+                                font-size: 16px

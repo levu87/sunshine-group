@@ -1,0 +1,10 @@
+extends _layout.pug
+
+block var
+	- var title = 'about-us'
+	- var bodyClass = 'about-us'
+
+block main
+	include ../components/aboutus/nav-about/index
+	include ../components/aboutus/aboutus/index
+	include ../components/customer/index

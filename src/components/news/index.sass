@@ -1,0 +1,148 @@
+.new-wrapper
+    .career-2
+        padding: 3.75rem 0
+        .tab-item 
+            display: none
+            &.active 
+                display: flex
+        .career-news-item
+            margin-bottom: 30px
+            .imgbox
+                img 
+                    width: 100%
+            .info 
+                padding-left: 16px
+                margin-top: 16px
+                border-left: 10px solid #f2f2f2
+                h3 
+                    a
+                        font-size: 20px 
+                        font-weight: 400
+                        color: #333333
+                        -webkit-line-clamp: 4
+                        overflow: hidden
+                        -webkit-box-orient: vertical
+                        font-weight: 400
+                        text-overflow: ellipsis
+                        height: 120px
+                        display: block
+                        text-transform: inherit
+                @media (max-width: 1025px)
+                    h3 
+                        a 
+                            font-size: 16px
+                .sub-title
+                    span 
+                        color: #8c0000
+                        margin-right: 10px
+                        font-weight: 600
+            &:hover 
+                .info 
+                    border-left: 10px solid #8c0000
+                    transition: all 0.4s ease-in-out
+        .pages
+            margin-top: 2rem
+            .modulepager
+                display: flex
+                justify-content: center
+                align-items: center
+                ul
+                    padding: 0
+                    margin: 0
+                    position: relative
+                    li
+                        display: inline-block
+                        padding: 0 10px
+                        &:last-child()
+                            position: relative
+                            &:after
+                                font: normal normal normal 24px/1 Material Design Icons
+                                content: '\f24f'
+                                font-size: 24px                  
+                        &.active
+                            a,span
+                                color: #ffffff
+                                background: #b72600
+                                border: none
+                        span,a
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            width: 32px
+                            height: 32px
+                            border: 2px solid #e1e1e1
+                            text-decoration: none
+                            color: #e1e1e1
+                            font-size: 16px
+        /////tab2/////
+        .row
+            .col-lg-3
+                margin-bottom: 20px
+        .figure-lightgallery
+            &:hover
+                figcaption
+                    border-color: #8c0000
+                .figure-image
+                    &:after
+                        opacity: 1
+            .figure-image
+                overflow: hidden
+                position: relative
+                &:after
+                    transition: opacity .7s ease-in-out
+                    font: normal normal normal 24px/1 Material Design Icons
+                    content: '\f24f'
+                    font-size: 24px   
+                    position: absolute
+                    left: 0
+                    color: #ffffff
+                    font-size: 50px
+                    bottom: 0
+                    opacity: 0
+                    pointer-events: none
+                    width: 100%
+                    height: 100%
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    background: rgba(#000000,.4)
+                &:hover
+                    a
+                        img
+                            transform: scale(1.05)
+                a
+                    height: 200px
+                    display: block
+                    width: auto
+                    &:not(:first-child)
+                        display: none
+                    iframe
+                        pointer-events: none
+                    img,iframe
+                        transition: transform .3s ease-in-out
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+
+            figcaption
+                min-height: 50px
+                transition: .3s all ease-in-out
+                position: relative
+                border-left: 10px solid #f2f2f2
+                padding-left: 16px
+                margin-top: 16px
+                .title
+                    *
+                        font-size: 18px
+                        color: #333333
+                        font-weight: 400
+                        display: -webkit-box
+                        -webkit-line-clamp: 3
+                        -webkit-box-orient: vertical
+                        overflow: hidden
+                        line-height: 27px
+        
+                @media screen and(max-width:768px)
+                    .title
+                        *
+                            font-size: 16px

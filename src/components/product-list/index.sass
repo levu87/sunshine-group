@@ -1,0 +1,175 @@
+.product-by-category 
+    background: #262c32
+    .product-by-category-wrapper
+        padding: 2rem 0
+
+        ul
+            padding: 0
+            margin: 0
+            list-style-type: none
+            li
+                .title-caption
+                    border-bottom: 1px solid #686c70
+                .title-caption
+                    border-top: none
+                    border-bottom: 1px solid #686c70
+                    position: relative
+                    margin:  10px 0 0 0
+                    .title
+                        &:hover,&.active
+                            color: #ffffff
+                            transition: all .3s ease-in-out
+                    a 
+                        &:hover,&.active
+                            color: #ffffff
+                            transition: all .3s ease-in-out
+
+                &.active
+                    .product-wrapper
+                        display: flex !important
+                    .title-caption
+                        a
+                            color: #ffffff
+                        .title
+                            color: #ffffff
+                            &:before
+                                transform: rotate(-180deg) !important
+                                line-height: 16px
+                                color: #fff
+                .title-caption
+                    transition: transform .3s  ease-in-out
+                    display: flex
+                    padding: 10px 0
+                    justify-content: space-between
+                    align-items: center
+                    .title
+                        cursor: pointer
+                        text-transform: uppercase
+                        display: block
+                        font-size: 18px
+                        font-weight: 700
+                        transition: transform .3s  ease-in-out
+                        color: #929598
+                        &:before
+                            font-family: 'Material Design Icons'
+                            content: '\f140'
+                            font-size: 20px
+                            width: 22px
+                            display: inline-block
+                            height: 16px
+                            flex:  0 0 17px
+                            font-size: 20px
+                            transition: transform .3s  ease-in-out
+                            color: #929598
+                    a
+                        transition: transform .3s  ease-in-out
+                        font-size: 16px
+                        display: block
+                        font-weight: 500
+                        color: #929598
+        @media screen and(max-width:767.8px)
+            ul
+                li
+                    &.active
+                        &:before
+                            top: 8px
+                    &:before
+                        left: 0
+                        top: 0
+                    .title-caption
+                        padding: 0 0 10px 0
+    .product-wrapper
+        display: none
+        margin: 20px 0
+        .product-item-category
+            padding: 0 10px
+            flex:  0 0 25%
+            max-width: 25%
+            .figure-image
+                position: relative    
+                .button-viewall
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    top: 0 
+                    left: 0 
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    opacity: 0
+                    transition: all .4s ease-in-out
+                    a 
+                        color: #ffffff
+                        border-top: 1.5px solid #ffffff
+                        border-bottom: 1.5px solid #ffffff
+                        padding: 2px 15px
+                        
+            &:hover 
+                .figure-image
+                    a 
+                        cursor: pointer
+                        img 
+                            transform: translateY(-10px)
+                            transition: all .4s ease-in-out
+                    .button-viewall 
+                        opacity: 1
+                        pointer-events: itinial
+                        a 
+                            &:hover
+                                color: #8c0000
+                                transition: all .3s ease-in-out
+                                border-top: 1.5px solid #8c0000
+                                border-bottom: 1.5px solid #8c0000
+            .figure-image
+                position: relative
+                padding: 20px 20px 0 20px
+                margin-bottom: 16px
+                > a
+                    display: block
+                    height: 200px
+                    padding: 20px
+                    width: auto
+                    img
+                        width: 100%
+                        height: 100%
+                        object-fit: scale-down
+            figcaption
+                .top-caption
+                    padding-bottom: 12px
+                    h2
+                        cursor: pointer
+                        line-height: 22px
+                        &:hover
+                            *
+                                
+                                color: #ffffff
+                        *
+                            margin-bottom: 0
+                            display: block
+                            font-size: 18px
+                            font-weight: 700
+                            color: #ffffff
+                            text-transform: uppercase
+                    h3
+                        cursor: pointer
+                        &:hover
+                            *
+                                
+                                color: #ffffff
+                        *
+                            display: -webkit-box
+                            -webkit-line-clamp: 2
+                            -webkit-box-orient: vertical
+                            overflow: hidden
+                            line-height: 20px
+                            font-size: 14px
+                            font-weight: 400
+                            color: #cccccc
+                @media screen and(max-width:1025px)
+                    .top-caption
+                        h2
+                            *
+                                font-size: 17px
+                        h3
+                            *
+                                font-size: 13px
