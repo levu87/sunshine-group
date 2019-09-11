@@ -1,0 +1,9 @@
+extends _layout.pug
+
+block var
+	- var title = 'News'
+	- var bodyClass = 'News-page'
+
+block main
+	include ../components/news/nav-new/index
+	include ../components/news/index

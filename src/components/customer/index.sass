@@ -1,0 +1,96 @@
+.khach-hang
+    padding: 60px 0
+    .title
+        h1
+            font-size: 36px
+            text-transform: uppercase
+            text-align: center
+            color: #8c0000
+    @media (max-width: 576px)
+        .title
+            h1 
+                font-size: 30px
+    .slider
+        .khachhang-slider
+            position: relative
+            .swiper-btn-next
+                display: none
+                position: absolute
+                top: 30px
+                right: 30px
+                outline: none
+            .swiper-btn-prev
+                display: none
+                margin-right: 20px
+                position: absolute
+                top: 30px
+                right: 30px
+                outline: none
+        .tab-navigation 
+            margin-bottom: 20px
+            margin-top: 10px
+            ul 
+                list-style: none 
+                text-align: center
+                li 
+                    display: inline-block
+                    margin-right: 15px
+                    a 
+                        color: #333333
+                    &:hover,&.active 
+                        a 
+                            color: #8c0000b3
+
+        .item
+            background: #ffffff
+            width: auto
+            padding: 10px
+            height: 90px
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px solid #ebebeb
+            position: relative
+            box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1)
+            img 
+                width: 100%
+                height: 100%
+                object-fit: scale-down
+            .overlay 
+                width: 100%
+                height: 100%
+                background: #8c0000b3
+                position: absolute
+                top: 0
+                left: 0
+                justify-content: center
+                align-items: center
+                opacity: 0
+                display: flex
+                pointer-events: none
+                transition: all .5s ease-in-out
+                text-align: center
+                a 
+                    color: #ffffff
+                    text-transform: uppercase
+                    font-size: 16px
+                    font-weight: 700
+            &:hover
+                .overlay
+                    pointer-events: initial
+                    opacity: 0
+                    transition: all 0.5s ease-in-out
+@media (max-width: 768px)
+    .doitac
+        padding: 40px 0
+        .slider
+            .doitac-slider
+                flex: 0 0 100%
+                max-width: 100%
+            .khachhang-slider
+                flex: 0 0 100%
+                max-width: 100%
+            .doitac-slider,.khachhang-slider
+                .swiper-slide
+                    display: flex
+                    justify-content: center

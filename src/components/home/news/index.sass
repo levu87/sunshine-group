@@ -13,17 +13,27 @@
                         .img
                             height: 240px
                             width: auto 
+                            overflow: hidden
                             img 
                                 width: 100%
                                 height: 100%
                                 object-fit: cover
+                                transition: all 0.4s ease-in-out
                         figcaption 
                             time 
                                 font-size: 12px 
                                 color: #f5f5f5
                             .news-title
                                 display: block
-                                color: #ffffff
+                                color: #929598
+                                transition: .4s ease-in-out
+                        &:hover 
+                            figcaption
+                                .news-title 
+                                    color: #ffffff
+                            .img 
+                                img 
+                                    transform: scale(1.10)
             .news-button-next
                 position: absolute
                 width: 35px
@@ -34,16 +44,17 @@
                 bottom: 50%
                 transform: translateY(-50%)
                 right: -3rem
-                border: 1.5px solid #999999
+                border: none
                 outline: none
                 em 
                     color: #999999
-                    font-size: 25px
+                    font-size: 40px
                     font-weight: bold
                 &:hover
-                    background: #8c2004
-                    color: #ffffff
-                    transition: all .3s ease-in-out
+                    em
+                        color: #8c2004
+                    
+                        transition: all .3s ease-in-out
             .news-button-prev
                 position: absolute
                 width: 35px
@@ -54,14 +65,36 @@
                 bottom: 50%
                 transform: translateY(-50%)
                 left: -3rem
-                border: 1.5px solid #999999
+                border: none
                 outline: none
                 em 
                     color: #999999
-                    font-size: 25px
+                    font-size: 40px
                     font-weight: bold
                 &:hover
-                    background: #8c2004
-                    color: #ffffff
-                    transition: all .3s ease-in-out
-        
+                    em
+                        color: #8c2004
+                        
+                        transition: all .3s ease-in-out
+            .swiper-pagination 
+                display: none
+                position: absolute
+                bottom: -3rem
+                left: 50%
+                transform: translateX(-50%)
+                span
+                    width: 10px
+                    height: 10px
+                    opacity: 1
+                    border-radius: 0px
+                    margin: 0 5px
+                    background: #999999
+                    position: static
+                    &.swiper-pagination-bullet-active
+                        background: #8c0000
+            @media (max-width: 876px)
+                .news-button-next,.news-button-prev
+                    display: none
+                .swiper-pagination 
+                    display: block
+                

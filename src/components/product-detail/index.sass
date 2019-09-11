@@ -1,0 +1,474 @@
+.product-information-detail
+	padding: 3.3rem 0
+	.title-h1-grey
+		margin-left: 2rem
+	.swiper-wrapper
+		padding: 2px
+	.swiper-product-top
+		margin-bottom: 18px
+		.swiper-container
+		.wrapper
+			
+			.swiper-image
+				height: 440px
+				width: auto
+				padding: 20px 
+				img
+					width: 100%
+					height: 100%
+					object-fit: contain
+			@media screen and(max-width:1025px)
+				.swiper-image
+					height: 400px
+			@media screen and(max-width:768px)
+				.swiper-image
+					height: 350px
+			@media screen and(max-width:767px)
+				.swiper-image
+					height: 300px
+	.swiper-product-thumb
+		.swiper-container
+			padding: 2px
+		.swiper-slide-thumb-active 
+			.wrapper
+				
+		.wrapper
+		
+			.swiper-image
+				height: 80px
+				width: auto
+				padding: 16px 0
+				img
+					width: 100%
+					height: 100%
+					object-fit: contain
+.product-information-wrapper
+	.info 
+		.title
+			font-size: 26px
+			font-weight: 500
+			color: #333333
+		.code
+			
+			color: #868686
+			padding: 10px 0
+		strong 
+			padding: 15px 0
+			display: block
+		ul 
+			color: #ebebeb
+			margin-left: 20px
+			li 
+				p 
+					color: #333333				
+	.hot-line-wrapper
+		padding: 10px 0
+		border-bottom: 1px solid #ebebeb
+		p
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			color: #666666
+			font-size: 16px
+			font-weight: 400
+			a
+				margin-left: 8px
+				text-decoration: none
+				font-weight: 700
+				font-size: 18px
+				color: #8a1f0e
+	.button-wrapper
+	
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-top: 20px
+		@media (min-width: 1200px)
+			margin-top: 20px
+	.check-out-button
+		a
+			padding: 14px 30px
+			background: #292e35
+			display: flex
+			justify-content: center
+			align-items: center
+			text-decoration: none
+			text-transform: uppercase
+			color: #ffffff
+			&:hover 
+				background: #8c0000
+				color: #ffffff
+				transition: all .3s ease-in-out
+
+	.social-network-wrapper
+		display: flex
+		justify-content: center
+		align-items: center
+		p
+			
+			color: #666666
+			font-weight: 400
+			margin-right: 16px
+		.social-button
+			&:not(:last-child)
+				margin-right: 16px
+			a
+				display: flex
+				justify-content: center
+				align-items: center
+				em
+					color: #666666
+
+	@media screen and(max-width:1200px)
+		padding: 0 20px
+		table
+			tr
+				td
+					&:first-child
+						width: 40%
+						max-width: 40%
+		.check-out-button
+			a
+				padding: 10px 20px
+	@media screen and(max-width:1025px)
+		margin-top: 30px
+		padding: 0
+		.check-out-button
+			a
+				padding: 10px 40px
+	@media screen and(max-width:576px)
+		margin-top: 20px
+		padding: 0
+		table
+			tr
+				display: flex
+				justify-content: flex-start
+				align-items: flex-start
+				flex: 0 0 100%
+				flex-wrap: wrap
+				td
+					flex: 0 0 50%
+					max-width: 50%
+	@media screen and(max-width:500px)
+		.bottom-button-wrapper
+			flex-direction: column
+			align-items: center
+		.social-network-wrapper
+			margin: 20px 0 0 0
+	@media screen and(max-width:400px)
+			table
+				tr
+					padding: 8px 0
+					td
+						padding: 0
+						flex: 0 0 100%
+						max-width: 100%
+						&:first-child
+							margin-bottom: 4px
+
+.product-tab-wrapper
+	padding-top: 50px
+	@media screen and(max-width:1441px)
+		padding-top: 40px
+		@media screen and(max-width:1025px)
+			padding-top: 30px
+	.tab-navigation-wrapper
+		padding: 16px
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		background: #292e35
+		ul 
+			list-style: none
+			li 
+				display: inline-block
+				margin-right: 1.5rem
+				a
+					text-transform: uppercase
+					font-size: 18px
+					font-weight: 600
+					color: #929598
+				&:hover,&.active 
+					a 
+						color: #ffffff
+						transition: all .3s ease-in-out
+	@media (max-width: 1025px)
+		.tab-navigation-wrapper
+			white-space: nowrap
+			overflow-x: auto
+.tab-wrapper
+	padding: 20px 0
+	.tab-item
+		display: none
+		&.active
+			display: block
+		p
+			font-size: 16px
+			color: #666666
+			font-weight: 400
+			margin-bottom: 16px
+		img
+			display: block
+			text-align: center
+			max-width: 100%
+			height: auto
+			// margin: 16px auto
+	.download-file
+		padding: 10px 0
+		*
+			color: #8a1f0e
+		a
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			color: #8a1f0e
+			text-decoration: underline
+			em
+	.tong-quan 
+		margin-top: 20px
+		.image 
+		
+		
+			img 
+				width: 100%
+				height: 100%
+				object-fit: cover
+		.content
+			padding-top: 10px
+	.access 
+		.list-item 
+			display: flex
+			flex: 0 0 100% 
+			max-width: 100%
+			flex-wrap: wrap
+			margin-right: -10px
+			.item 
+				flex: 0 0 20% 
+				max-width: 20%
+				padding: 10px
+				figure 
+					background: #ebebeb
+					.img 
+						height: auto
+						img 
+							width: 100%
+							object-fit: scale-down
+					figcaption 
+						text-align: center
+						a
+							display: block
+							padding: 15px
+							font-size: 16px
+							color: #333333
+							text-transform: uppercase
+					&:hover 
+						.img 
+							img 
+								transform: scale(1.03)
+				@media (max-width: 1025px)			
+					flex: 0 0 25%
+					max-width: 25%
+				@media (max-width: 768px)
+					flex: 0 0 50%
+					max-width: 50%
+	table
+		width: 100%
+		tr
+			&:last-child
+				td
+					&:last-child
+						font-weight: 700
+			&:first-child
+				td
+					padding: 0  0 8px 0
+			td
+				padding: 8px 0
+				color: #666666
+				font-size: 16px
+				font-weight: 400
+				a
+					color: #666666
+					text-decoration: underline
+					em
+						color: #666666
+				&:first-child
+					width: 30%
+					max-width: 30%
+					font-weight: 600
+	.product-family
+		.product-wrapper
+			margin: 20px 0
+			.product-item-category
+				padding: 0 10px
+				flex:  0 0 25%
+				max-width: 25%
+				.figure-image
+					position: relative    
+				&:hover 
+					.figure-image
+						a 
+							cursor: pointer
+							img 
+								padding-bottom: 10px 
+								transition: all .4s ease-in-out
+				.figure-image
+					position: relative
+					padding: 20px 20px 0 20px
+					margin-bottom: 16px
+					> a
+						display: block
+						height: 200px
+						padding: 20px
+						width: auto
+						img
+							width: 100%
+							height: 100%
+							object-fit: scale-down
+				figcaption
+					.top-caption
+						padding-bottom: 12px
+						h2
+							cursor: pointer
+							line-height: 22px
+							&:hover
+								*
+									
+									color: #333333
+							*
+								margin-bottom: 0
+								display: block
+								font-size: 18px
+								font-weight: 700
+								color: #333333
+								text-transform: uppercase
+						h3
+							cursor: pointer
+							&:hover
+								*
+									
+									color: #ffffff
+							*
+								display: -webkit-box
+								-webkit-line-clamp: 2
+								-webkit-box-orient: vertical
+								overflow: hidden
+								line-height: 20px
+								font-size: 14px
+								font-weight: 400
+								color: #cccccc
+					@media screen and(max-width:1025px)
+						.top-caption
+							h2
+								*
+									font-size: 17px
+							h3
+								*
+									font-size: 13px
+	.figure-lightgallery
+		&:hover
+			figcaption
+				border-color: #8c0000
+			.figure-image
+				&:after
+					opacity: 1
+		.figure-image
+			overflow: hidden
+			position: relative
+			&:after
+				transition: opacity .7s ease-in-out
+				font: normal normal normal 24px/1 Material Design Icons
+				content: '\f40d'
+				font-size: 24px   
+				position: absolute
+				left: 0
+				color: #ffffff
+				font-size: 50px
+				bottom: 0
+				opacity: 0
+				pointer-events: none
+				width: 100%
+				height: 100%
+				display: flex
+				justify-content: center
+				align-items: center
+				background: rgba(#000000,.4)
+			&:hover
+				a
+					img
+						transform: scale(1.05)
+			a
+				height: 200px
+				display: block
+				width: auto
+				&:not(:first-child)
+					display: none
+				iframe
+					pointer-events: none
+				img,iframe
+					transition: transform .3s ease-in-out
+					width: 100%
+					height: 100%
+					object-fit: cover
+
+		figcaption
+			min-height: auto
+			transition: .3s all ease-in-out
+			position: relative
+			border-left: 10px solid #f2f2f2
+			padding-left: 16px
+			margin-top: 16px
+			.title
+				*
+					font-size: 18px
+					color: #333333
+					font-weight: 400
+					display: -webkit-box
+					-webkit-line-clamp: 3
+					-webkit-box-orient: vertical
+					overflow: hidden
+					line-height: 27px
+.others-project
+	.white-title-bg-grey
+		margin-bottom: 30px
+		padding: 16px
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		background: #292e35
+		*
+			text-transform: uppercase
+			font-size: 18px
+			font-weight: 600
+			color: #ffffff
+	.contain
+		.figure-product
+			.figure-image
+				width: auto 
+				height: 200px
+				overflow: hidden
+				img 
+					width: 100%
+					height: 100%
+					object-fit: scale-down
+			figcaption
+				.top-caption
+					h2
+						a
+							font-size: 18px
+							color: #333333
+					h3 
+						font-size: 14px
+						color: #999999
+						font-weight: 400
+				.bottom-caption
+					display: none
+			&:hover 
+				.figure-image
+					img 
+						transform: translateY(-10px)
+						transition: all .4s ease-in-out
+				figcaption 
+					h3 
+						
+						color: #8c0000
+						transition: .3s

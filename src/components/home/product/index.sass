@@ -1,11 +1,11 @@
 .home-product
     background: #292e35
     padding: 4rem 0
+    position: relative
+    z-index: 9
+    .title-h1-white 
+        padding-bottom: 2rem
     .product-wrapper
-        .product-title
-            padding-bottom: 4rem 
-            h1 
-                color: #ffffff!important
         .product-slider1
             border-bottom: 1px solid #999999
             padding-bottom: 25px
@@ -14,19 +14,25 @@
                 text-align: center
                 .img
                     display: block
-                    height: 200px
-                    width: auto
+                    width: 100%
+                    text-align: center
                     img 
-                        height: 100%
-                        object-fit: none
+                        transition: 0.3s ease
+                        -webkit-transition: 0.3s ease
+                        -moz-transition: 0.3s ease
+                        backface-visibility: hidden
+                        max-height: 200px
                 .product-title 
                     color: #999999
                     font-size: 24px
                     text-transform: uppercase
                 &:hover 
                     .product-title
-                        color: #8c2004
+                        color: #ffffff
                         transition: all .3s ease-in-out
+                    .img 
+                        img 
+                            transform: translateY(-10px)
             @media (max-width: 1025px)
                 .item1
                     flex: 0 0 100%
@@ -40,20 +46,26 @@
                     .swiper-slide 
                         text-align: center
                         .img
-                            height: 160px
-                            width: auto
                             display: block
+                            width: 100%
+                            text-align: center
                             img 
-                                height: 100%
-                                object-fit: cover
+                                transition: 0.3s ease
+                                -webkit-transition: 0.3s ease
+                                -moz-transition: 0.3s ease
+                                backface-visibility: hidden
+                                max-height: 160px
                         .product-title 
                             color: #999999
                             font-size: 18px
                             text-transform: uppercase
                         &:hover 
                             .product-title
-                                color: #8c2004
+                                color: #ffffff
                                 transition: all .3s ease-in-out   
+                            .img 
+                                img 
+                                    transform: translateY(-10px)
             .product-button-next
                 position: absolute
                 width: 35px
@@ -64,15 +76,16 @@
                 bottom: 50%
                 transform: translateY(50%)
                 right: -3rem
-                border: 1.5px solid #999999
+                border: none
                 outline: none
                 em 
                     color: #999999
-                    font-size: 25px
+                    font-size: 40px
                     font-weight: bold
                 &:hover 
-                    background: #8c2004
-                    transition: all .4s ease-in-out
+                    em
+                        color: #8c2004
+                        transition: all .4s ease-in-out
             .product-button-prev
                 position: absolute
                 width: 35px
@@ -83,22 +96,43 @@
                 bottom: 50%
                 transform: translateY(50%)
                 left: -3rem
-                border: 1.5px solid #999999
+                border: none
                 outline: none
                 em 
                     color: #999999
-                    font-size: 25px
+                    font-size: 40px
                     font-weight: bold
                 &:hover 
-                    background: #8c2004
-                    transition: all .4s ease-in-out
+                    em
+                        color: #8c2004
+                        transition: all .4s ease-in-out
+            .swiper-pagination 
+                display: none
+                position: absolute
+                bottom: -3rem
+                left: 50%
+                transform: translateX(-50%)
+                span
+                    width: 10px
+                    height: 10px
+                    opacity: 1
+                    border-radius: 0px
+                    margin: 0 5px
+                    background: #999999
+                    position: static
+                    &.swiper-pagination-bullet-active
+                        background: #8c0000
             @media (max-width: 876px)
                 .product-button-next
+                    display: none
                     bottom: -2rem
-                    right: 44%
+                    right: 35%
                 .product-button-prev
+                    display: none
                     bottom: -2rem
-                    left: 44%
+                    left: 35%
+                .swiper-pagination 
+                    display: block
 @media (max-width: 768px)
     .product-wrapper
         padding: 0rem 2rem
