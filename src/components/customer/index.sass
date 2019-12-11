@@ -13,34 +13,96 @@
     .slider
         .khachhang-slider
             position: relative
-            .swiper-btn-next
-                display: none
-                position: absolute
-                top: 30px
-                right: 30px
+        .swiper-navigation
+            width: 105%
+            display: flex
+            align-items: center
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            z-index: 99
+            .customer-button-next,.customer-button-prev
+                width: 35px
+                height: 35px
+                display: flex
+                align-items: center
+                border: none
                 outline: none
-            .swiper-btn-prev
-                display: none
-                margin-right: 20px
-                position: absolute
-                top: 30px
-                right: 30px
-                outline: none
-        .tab-navigation 
-            margin-bottom: 20px
-            margin-top: 10px
-            ul 
-                list-style: none 
-                text-align: center
-                li 
-                    display: inline-block
-                    margin-right: 15px
-                    a 
-                        color: #333333
-                    &:hover,&.active 
-                        a 
-                            color: #8c0000b3
+                em 
+                    color: #999999
+                    font-size: 40px
+                    font-weight: bold
+                &:hover 
+                    em
+                        color: #8c2004
+                        transition: all .4s ease-in-out
+            .customer-button-next 
+                margin-left: auto
+            @media (max-width: 992px)
+                top: 110%
+                width: 50px
+        .tab-content 
+            display: none 
+            &.active
+                display: block
+        // .tab-navigation 
+        //     margin-bottom: 20px
+        //     margin-top: 10px
+        //     ul 
+        //         list-style: none 
+        //         text-align: center
+        //         li 
+        //             display: inline-block
+        //             margin-right: 15px
+        //             a 
+        //                 color: #333333
+        //             &:hover,&.active 
+        //                 a 
+        //                     color: #8c0000b3
 
+        // .item
+        //     background: #ffffff
+        //     width: auto
+        //     padding: 10px
+        //     height: 90px
+        //     display: flex
+        //     justify-content: center
+        //     align-items: center
+        //     border: 1px solid #ebebeb
+        //     position: relative
+        //     box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1)
+        //     img 
+        //         width: 100%
+        //         height: 100%
+        //         object-fit: scale-down
+        //     .overlay 
+        //         width: 100%
+        //         height: 100%
+        //         background: #8c0000b3
+        //         position: absolute
+        //         top: 0
+        //         left: 0
+        //         justify-content: center
+        //         align-items: center
+        //         opacity: 0
+        //         display: flex
+        //         pointer-events: none
+        //         transition: all .5s ease-in-out
+        //         text-align: center
+        //         a 
+        //             color: #ffffff
+        //             text-transform: uppercase
+        //             font-size: 16px
+        //             font-weight: 700
+        //     &:hover
+        //         .overlay
+        //             pointer-events: initial
+        //             opacity: 0
+        //             transition: all 0.5s ease-in-out
+    .tab-content,.tab-item
+        margin-top: 20px
+        position: relative
         .item
             background: #ffffff
             width: auto
@@ -52,34 +114,57 @@
             border: 1px solid #ebebeb
             position: relative
             box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1)
+            transition: .2s
             img 
                 width: 100%
                 height: 100%
                 object-fit: scale-down
-            .overlay 
-                width: 100%
-                height: 100%
-                background: #8c0000b3
-                position: absolute
-                top: 0
-                left: 0
+            &:hover 
+                border: 1px solid #8c0000
+        .col 
+            flex: 0 0 20%
+            max-width: 20%
+            padding: 10px
+            @media (max-width: 1025px)
+                flex: 0 0 25%
+                max-width: 25%
+            @media (max-width: 768px)
+                flex: 0 0 33.33%
+                max-width: 33.33%
+            @media (max-width: 576px)
+                flex: 0 0 50%
+                max-width: 50%
+        .col
+            display: none
+        .swiper-wrapper
+            display: flex
+            flex: 0 0 100%
+            max-width: 100%
+            flex-wrap: wrap
+        .view-more-brand
+            margin-top: 20px
+            display: flex
+            justify-content: center
+            align-items: center
+            a
+                cursor: pointer
+                display: flex
                 justify-content: center
                 align-items: center
-                opacity: 0
-                display: flex
-                pointer-events: none
-                transition: all .5s ease-in-out
-                text-align: center
-                a 
-                    color: #ffffff
-                    text-transform: uppercase
-                    font-size: 16px
-                    font-weight: 700
-            &:hover
-                .overlay
-                    pointer-events: initial
-                    opacity: 0
-                    transition: all 0.5s ease-in-out
+                flex-direction: column
+                &:hover
+                    em
+                        transform: translateY(4px)
+
+            span
+                font-size: 16px
+                color: #333333
+                font-weight: 400
+            em
+                transition: .3s transform ease-in-out
+                line-height: 12px
+                font-size: 30px
+                color: #333333
 @media (max-width: 768px)
     .doitac
         padding: 40px 0
@@ -94,3 +179,6 @@
                 .swiper-slide
                     display: flex
                     justify-content: center
+.customer-page
+    .title-h1-grey
+        width: 100%

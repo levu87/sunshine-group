@@ -1,6 +1,6 @@
 .new-wrapper
     .career-2
-        padding: 3.75rem 0
+        padding-top: 3.75rem 
         .tab-item 
             display: none
             &.active 
@@ -27,25 +27,35 @@
                         height: 120px
                         display: block
                         text-transform: inherit
+                        @media (max-width: 768px)
+                            height: 60px
                 @media (max-width: 1025px)
                     h3 
                         a 
                             font-size: 16px
                 .sub-title
-                    span 
+                    a
                         color: #8c0000
                         margin-right: 10px
                         font-weight: 600
+                        position: relative
+                        em 
+                            position: absolute
+                            top: 56%
+                            transform: translateY(-50%)
+                            right: -20px
+
             &:hover 
                 .info 
                     border-left: 10px solid #8c0000
                     transition: all 0.4s ease-in-out
         .pages
-            margin-top: 2rem
+            padding-bottom: 3.75rem 
             .modulepager
                 display: flex
                 justify-content: center
                 align-items: center
+                
                 ul
                     padding: 0
                     margin: 0
@@ -62,7 +72,7 @@
                         &.active
                             a,span
                                 color: #ffffff
-                                background: #b72600
+                                background: #000000
                                 border: none
                         span,a
                             display: flex
@@ -146,3 +156,38 @@
                     .title
                         *
                             font-size: 16px
+    .pages
+        margin-top: 2rem
+        margin-bottom: 3.75rem
+        .modulepager
+            display: flex
+            justify-content: center
+            align-items: center
+            ul
+                padding: 0
+                margin: 0
+                position: relative
+                li
+                    display: inline-block
+                    padding: 0 10px
+                    &:last-child()
+                        position: relative
+                        &:after
+                            font: normal normal normal 24px/1 Material Design Icons
+                            content: '\f24f'
+                            font-size: 24px                  
+                    &.active
+                        a,span
+                            color: #ffffff
+                            background: #000000
+                            border: none
+                    span,a
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 32px
+                        height: 32px
+                        border: 2px solid #e1e1e1
+                        text-decoration: none
+                        color: #e1e1e1
+                        font-size: 16px

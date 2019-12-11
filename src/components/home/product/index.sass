@@ -1,10 +1,12 @@
 .home-product
-    background: #292e35
+    background: #171e26
     padding: 4rem 0
     position: relative
     z-index: 9
     .title-h1-white 
         padding-bottom: 2rem
+        font-weight: 400
+        
     .product-wrapper
         .product-slider1
             border-bottom: 1px solid #999999
@@ -55,6 +57,9 @@
                                 -moz-transition: 0.3s ease
                                 backface-visibility: hidden
                                 max-height: 160px
+                                @media (max-width: 576px)
+                                    max-height: 120px
+
                         .product-title 
                             color: #999999
                             font-size: 18px
@@ -66,73 +71,46 @@
                             .img 
                                 img 
                                     transform: translateY(-10px)
-            .product-button-next
-                position: absolute
-                width: 35px
-                height: 35px
+            .swiper-navigation
+                width: 110%
                 display: flex
-                justify-content: center
                 align-items: center
-                bottom: 50%
-                transform: translateY(50%)
-                right: -3rem
-                border: none
-                outline: none
-                em 
-                    color: #999999
-                    font-size: 40px
-                    font-weight: bold
-                &:hover 
-                    em
-                        color: #8c2004
-                        transition: all .4s ease-in-out
-            .product-button-prev
                 position: absolute
-                width: 35px
-                height: 35px
-                display: flex
-                justify-content: center
-                align-items: center
-                bottom: 50%
-                transform: translateY(50%)
-                left: -3rem
-                border: none
-                outline: none
-                em 
-                    color: #999999
-                    font-size: 40px
-                    font-weight: bold
-                &:hover 
-                    em
-                        color: #8c2004
-                        transition: all .4s ease-in-out
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                z-index: 99
+                .product-button-next,.product-button-prev
+                    width: 35px
+                    height: 35px
+                    display: flex
+                    border: none
+                    outline: none
+                    em 
+                        color: #999999
+                        font-size: 40px
+                        font-weight: bold
+                    &:hover 
+                        em
+                            color: #8c2004
+                            transition: all .4s ease-in-out
+                .product-button-next 
+                    margin-left: auto
+                @media (max-width: 992px)
+                    top: 110%
+                    width: 50px
+
             .swiper-pagination 
                 display: none
-                position: absolute
-                bottom: -3rem
-                left: 50%
-                transform: translateX(-50%)
-                span
-                    width: 10px
-                    height: 10px
-                    opacity: 1
-                    border-radius: 0px
-                    margin: 0 5px
-                    background: #999999
-                    position: static
-                    &.swiper-pagination-bullet-active
-                        background: #8c0000
             @media (max-width: 876px)
                 .product-button-next
-                    display: none
+                    display: block
                     bottom: -2rem
                     right: 35%
                 .product-button-prev
-                    display: none
+                    display: block
                     bottom: -2rem
                     left: 35%
-                .swiper-pagination 
-                    display: block
 @media (max-width: 768px)
     .product-wrapper
         padding: 0rem 2rem

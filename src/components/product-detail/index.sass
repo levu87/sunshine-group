@@ -1,5 +1,5 @@
 .product-information-detail
-	padding: 3.3rem 0
+	padding-top: 3.3rem 
 	.title-h1-grey
 		margin-left: 2rem
 	.swiper-wrapper
@@ -11,14 +11,16 @@
 			
 			.swiper-image
 				height: 440px
+				display: block
 				width: auto
 				padding: 20px 
 				img
 					width: 100%
 					height: 100%
 					object-fit: contain
-			@media screen and(max-width:1025px)
+			@media screen and(max-width:1441px)
 				.swiper-image
+					padding: 0
 					height: 400px
 			@media screen and(max-width:768px)
 				.swiper-image
@@ -35,9 +37,13 @@
 		.wrapper
 		
 			.swiper-image
-				height: 80px
+				height: 160px
 				width: auto
 				padding: 16px 0
+				@media screen and(max-width:576px)
+					height: 100px
+					padding: 0
+
 				img
 					width: 100%
 					height: 100%
@@ -47,7 +53,7 @@
 		.title
 			font-size: 26px
 			font-weight: 500
-			color: #333333
+			color: #333333 
 		.code
 			
 			color: #868686
@@ -56,7 +62,7 @@
 			padding: 15px 0
 			display: block
 		ul 
-			color: #ebebeb
+			color: #333333
 			margin-left: 20px
 			li 
 				p 
@@ -83,22 +89,39 @@
 		justify-content: space-between
 		align-items: center
 		margin-top: 20px
-		@media (min-width: 1200px)
-			margin-top: 20px
-	.check-out-button
+		@media (min-width: 1441px)
+			margin-top: 70px
+		@media (min-width: 1025px)
+			margin-top: 30px
+	.button 
+		display: flex
+		.contact-button
+			margin-right: 15px
+	.buy-button,.contact-button
 		a
 			padding: 14px 30px
-			background: #292e35
+			background: #171e26
 			display: flex
 			justify-content: center
 			align-items: center
 			text-decoration: none
 			text-transform: uppercase
 			color: #ffffff
-			&:hover 
-				background: #8c0000
-				color: #ffffff
-				transition: all .3s ease-in-out
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				top: 0
+				bottom: 0
+				right: 0
+				width: 3px
+				background-color: #8c0000
+				transform-origin: center
+				transform: scaleY(0)
+				transition: transform 0.5s ease
+			&:hover
+				&:before
+					transform: scaleY(1)
 
 	.social-network-wrapper
 		display: flex
@@ -109,6 +132,10 @@
 			color: #666666
 			font-weight: 400
 			margin-right: 16px
+			transition: .2s
+			&:hover 
+				color: #8c0000
+
 		.social-button
 			&:not(:last-child)
 				margin-right: 16px
@@ -118,6 +145,9 @@
 				align-items: center
 				em
 					color: #666666
+					transition: .2s
+					&:hover 
+						color: #8c0000
 
 	@media screen and(max-width:1200px)
 		padding: 0 20px
@@ -167,17 +197,18 @@
 							margin-bottom: 4px
 
 .product-tab-wrapper
-	padding-top: 50px
+	margin-top: 50px
+	background: #171e26
 	@media screen and(max-width:1441px)
-		padding-top: 40px
+		margin-top: 40px
 		@media screen and(max-width:1025px)
-			padding-top: 30px
+			margin-top: 30px
 	.tab-navigation-wrapper
 		padding: 16px
 		display: flex
 		justify-content: flex-start
 		align-items: center
-		background: #292e35
+		background: #171e26
 		ul 
 			list-style: none
 			li 
@@ -204,7 +235,7 @@
 			display: block
 		p
 			font-size: 16px
-			color: #666666
+			color: #b2b2b2
 			font-weight: 400
 			margin-bottom: 16px
 		img
@@ -213,6 +244,9 @@
 			max-width: 100%
 			height: auto
 			// margin: 16px auto
+		tr 
+			td 
+				color: #b2b2b2
 	.download-file
 		padding: 10px 0
 		*
@@ -247,7 +281,6 @@
 				max-width: 20%
 				padding: 10px
 				figure 
-					background: #ebebeb
 					.img 
 						height: auto
 						img 
@@ -259,12 +292,17 @@
 							display: block
 							padding: 15px
 							font-size: 16px
-							color: #333333
+							color: #929598
 							text-transform: uppercase
 					&:hover 
+						figcaption 
+							a 
+								color: #ffffff
 						.img 
 							img 
-								transform: scale(1.03)
+								transform: translateY(-5px)
+								transition: all .4s ease-in-out
+						
 				@media (max-width: 1025px)			
 					flex: 0 0 25%
 					max-width: 25%
@@ -298,10 +336,16 @@
 	.product-family
 		.product-wrapper
 			margin: 20px 0
+			flex: 0 0 100%
+			max-width: 100%
+			flex-wrap: wrap
 			.product-item-category
 				padding: 0 10px
 				flex:  0 0 25%
 				max-width: 25%
+				@media (max-width: 992px)
+					flex: 0 0 50%
+					max-width: 50%
 				.figure-image
 					position: relative    
 				&:hover 
@@ -313,12 +357,12 @@
 								transition: all .4s ease-in-out
 				.figure-image
 					position: relative
-					padding: 20px 20px 0 20px
+					// padding: 20px 20px 0 20px
 					margin-bottom: 16px
 					> a
 						display: block
 						height: 200px
-						padding: 20px
+						// padding: 20px
 						width: auto
 						img
 							width: 100%
@@ -330,16 +374,18 @@
 						h2
 							cursor: pointer
 							line-height: 22px
+							a 
+								color: #ffffff
 							&:hover
 								*
 									
-									color: #333333
+									color: #fff
 							*
 								margin-bottom: 0
 								display: block
 								font-size: 18px
 								font-weight: 700
-								color: #333333
+								color: #ffffff
 								text-transform: uppercase
 						h3
 							cursor: pointer
@@ -364,6 +410,13 @@
 							h3
 								*
 									font-size: 13px
+				&:hover 
+					h2 
+						a 
+							color: #ffffff
+					h3 
+						a
+							color: #ffffff
 	.figure-lightgallery
 		&:hover
 			figcaption
@@ -400,6 +453,7 @@
 				height: 200px
 				display: block
 				width: auto
+
 				&:not(:first-child)
 					display: none
 				iframe
@@ -420,7 +474,7 @@
 			.title
 				*
 					font-size: 18px
-					color: #333333
+					color: #ffffff
 					font-weight: 400
 					display: -webkit-box
 					-webkit-line-clamp: 3
@@ -428,13 +482,15 @@
 					overflow: hidden
 					line-height: 27px
 .others-project
+	background: #171e26
+	padding-bottom: 20px
 	.white-title-bg-grey
 		margin-bottom: 30px
 		padding: 16px
 		display: flex
 		justify-content: flex-start
 		align-items: center
-		background: #292e35
+		background: #171e26
 		*
 			text-transform: uppercase
 			font-size: 18px
@@ -455,11 +511,12 @@
 					h2
 						a
 							font-size: 18px
-							color: #333333
+							color: #ffffff
 					h3 
-						font-size: 14px
-						color: #999999
-						font-weight: 400
+						a
+							font-size: 14px
+							color: #999999
+							font-weight: 400
 				.bottom-caption
 					display: none
 			&:hover 
@@ -469,6 +526,12 @@
 						transition: all .4s ease-in-out
 				figcaption 
 					h3 
-						
-						color: #8c0000
-						transition: .3s
+						a
+							color: #ffffff
+							transition: .3s
+.product-detail-page
+	.product-nav
+		display: none!important
+.hidden-breadcrumb
+	.global-breadcrumb
+		display: none

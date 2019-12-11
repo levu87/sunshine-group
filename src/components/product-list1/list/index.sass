@@ -1,65 +1,61 @@
 .product-list1
-    margin-bottom: 3.75rem
-
     .heading
-        margin-bottom: 25px
+        
         display: flex
         align-items: center
-        
-        .grill
-            display: none
-            .select
-                display: inline-block
-                position: relative
-                select
-                    width: 210px
-                    height: 40px
-                    font-size: 18px
-                    color: #666666
-                    padding: 5px 10px
-                    background: #ebebeb
-                    padding-right: 30px
-                    border: none
-                    border-radius: 0
-                    -webkit-appearance: none
-                    -moz-appearance: none
-                    &:focus
-                        outline: none
-                &:after
-                    content: '\f140'
-                    font: normal normal normal 24px/1 Material Design Icons
-                    position: absolute
-                    top: 50%
-                    right: 10px
-                    font-size: 18px
-                    transform: translateY(-50%)
-                    color: #666666
-            @media (max-width: 768px)
-                .select 
-                    select 
-                        width: 150px
-                        height: 35px
+        background: #171e26
         .order-by
             // margin-left: auto
-            .select
-                display: inline-block
-                position: relative
-                margin-left: 1rem
-                select
-                    width: 210px
-                    height: 40px
-                    color: #666666
-                    padding: 5px 10px
-                    background: #ebebeb
-                    padding-right: 30px
-                    font-size: 18px
-                    border-radius: 0
-                    border: none
-                    -webkit-appearance: none
-                    -moz-appearance: none
-                    &:focus
-                        outline: none
-                &:after
+            margin: 25px 0px
+            display: flex
+            align-items: center
+            span 
+                color: #ffffff
+            // .select
+            //     display: inline-block
+            //     position: relative
+            //     margin-left: 1rem
+            //     select
+            //         width: 210px
+            //         height: 40px
+            //         color: #666666
+            //         padding: 5px 10px
+            //         border: 1px solid #666666
+            //         background: none
+            //         padding-right: 30px
+            //         font-size: 18px
+            //         border-radius: 0
+            //         -webkit-appearance: none
+            //         -moz-appearance: none
+            //         &:focus
+            //             outline: none
+            //     &:after
+            //         content: '\f140'
+            //         font: normal normal normal 24px/1 Material Design Icons
+            //         position: absolute
+            //         top: 50%
+            //         right: 10px
+            //         font-size: 18px
+            //         transform: translateY(-50%)
+            //         color: #666666
+            // @media (max-width: 768px)
+            //     .select 
+            //         select 
+            //             width: 150px
+            //             height: 35px
+            .custom-select 
+                width: 210px
+                height: 40px
+                position: relative 
+                left: 30px
+                select 
+                    display: none 
+            .select-selected 
+
+                background-color: none
+                border: 1px solid #999999
+                
+                &:after 
                     content: '\f140'
                     font: normal normal normal 24px/1 Material Design Icons
                     position: absolute
@@ -67,22 +63,52 @@
                     right: 10px
                     font-size: 18px
                     transform: translateY(-50%)
-                    color: #666666
-            @media (max-width: 768px)
-                .select 
-                    select 
-                        width: 150px
-                        height: 35px
+                    color: #999999
+                    border-color: #fff transparent transparent transparent 
+                &.select-arrow-active 
+                    &:after 
+                        border-color: transparent transparent #fff transparent 
+                        
+            .select-items div,.select-selected 
+                color: #999999
+                padding: 8px 16px 
+                border: 1px solid transparent 
+                border-color: #999999 #999999 #999999 #999999
+                cursor: pointer 
+                user-select: none 
+                &.select-arrow-active 
+                    border-color: #999999 #999999 transparent #999999
+            .select-items 
+                position: absolute 
+                background-color: none
+                
+                top: 100% 
+                left: 0 
+                right: 0 
+                z-index: 99 
+            .select-items>div
+                border-color: #999999
+                border-top: none!important
+                // background: #292e35
+                border-bottom: none
+            .select-items>div:last-child 
+                border-bottom: 1px solid #999999
+                // background: #292e35
+            .select-hide 
+                display: none 
+            .select-items div:hover, .same-as-selected 
+                background: none 
+                color: #ffffff
     .list-by-cate
         padding-bottom: 3.75rem
-
+        background: #171e26
         .title
             margin-bottom: 30px
             padding: 16px
             display: flex
             justify-content: flex-start
             align-items: center
-            background: #292e35
+            background: #171e26
             padding: 16px 2rem
             *
                 text-transform: uppercase
@@ -103,7 +129,7 @@
                     .top-caption
                         h2
                             a
-                                color: #333333
+                                color: #ffffff
                                 font-size: 18px
                         h3 
                             font-size: 14px
@@ -122,5 +148,5 @@
                     .top-caption
                         h3 
                             
-                            color: #8c0000
+                            color: #ffffff
                             transition: all .3s ease-in-out

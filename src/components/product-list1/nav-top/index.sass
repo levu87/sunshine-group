@@ -1,54 +1,193 @@
-.product-list1-nav
-	padding-top: 3.75rem 
-	.product-wrapper
-		padding: 0 30px
-		.title-h1-grey
-			margin-left: 2rem
-    		padding: 0 2rem
-		.box-top
-			margin-bottom: 2rem
-			.content 
-				p 
-					font-size: 18px
-					font-weight: 300
-					color: #666666
-			@media (max-width: 1025px)
-				.content
-					padding-bottom: 2rem
-			nav
-				margin-left: 2rem
-				a 
-					display: inline-block
-					position: relative
-					flex: 0 0 50%
-					transition: all .3s ease-in-out
-					margin-bottom: 24px
-					padding-left: 30px
-					max-width: 50%
-					color: #999999
-					font-size: 14px
-					font-weight: 600
-					text-transform: uppercase
-					&:before 
-						position: absolute
-						width: 15px
-						height: 15px
-						background: #000000
-						content: ''
-						left: 0 
-						top: 50%
-						transform: translateY(-50%)
-						display: block
-						opacity: 0
-						transition: all .4s ease-in-out
-					&:hover,&.active
-						position: relative
-						color: #000000
-						&:before
-							opacity: 1
-			@media (max-width: 1025px)
-				nav 
-					margin: 0
+
+.product-nav
+	.select 
+		position: relative
+		&:after 
+			content: '\f140'
+			font: normal normal normal 24px/1 Material Design Icons
+			position: absolute
+			top: 50%
+			right: 10px
+			font-size: 18px
+			transform: translateY(-50%)
+			color: #fff
+			border-color: #fff transparent transparent transparent 
+	select 
+		background: none!important
+		color: #ffffff!important
+		outline: none 
+		padding: 0px 10px!important
+		border: 1px solid #999999
+		border-radius: 0!important
+	.select
+		display: none
+		@media (max-width: 768px)
+			display: block
+	.small-title
+		color: #ffffff
+		font-size: 18px
+		font-weight: 700
+		display: none
+		@media (max-width: 768px)
+			display: block
+	@media (max-width: 768px)
+		nav 
+			display: none
+	.bg1
+		background-image: url('../img/bg1.jpg')
+		background-size: cover
+		background-repeat: no-repeat
+		padding-top: 3.75rem 
+		transition: background-image 2000ms linear
+		
+	.bg2
+		background-image: url('../img/bg2.jpg')
+		background-size: cover
+		background-repeat: no-repeat
+		padding-top: 3.75rem 
+		transition: background-image 2000ms linear
+
+	.bg3
+		background-image: url('../img/bg3.jpg')
+		background-size: cover
+		background-repeat: no-repeat
+		padding-top: 3.75rem 
+		transition: background-image 2000ms linear
+
+	.bg4
+		background-image: url('../img/bg4.jpg')
+		background-size: cover
+		background-repeat: no-repeat
+		padding-top: 3.75rem 
+	.bg5,.bg6,.bg7,.bg8,.bg9,.bg10,.bg11
+		background-image: url('../img/bg1.jpg')
+		background-size: cover
+		background-repeat: no-repeat
+		padding-top: 3.75rem 
+		transition: background-image 2000ms linear
+
+	@keyframes cf3FadeInOut 
+		0% 
+			opacity: 1
+		
+		45% 
+			opacity: 1
+		
+		55% 
+			opacity: 0
+		
+		100% 
+			opacity: 0
+		
+
+	.animation
+		-webkit-transition: opacity 1s ease-in-out
+		-moz-transition: opacity 1s ease-in-out
+		-o-transition: opacity 1s ease-in-out
+		transition: opacity 1s ease-in-out
+	.product-list1-nav,.bg1,.bg2,.bg3,.bg4,.bg5,.bg6,.bg7,.bg8,.bg9,.bg10,.bg11
+		position: relative
+		transition: background-image 2000ms linear
+		&:after
+			content: ''
+			display: block
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			background: rgba(0,0,0,0.6)
+			
+		
+
+.product-page
+	@media (max-width: 768px)
+		nav
+			display: none
+
+	.small-title
+		color: #ffffff
+		font-size: 18px
+		font-weight: 700
+		display: none
+		@media (max-width: 768px)
+			display: block
+	.select 
+		position: relative
+		&:after 
+			content: '\f140'
+			font: normal normal normal 24px/1 Material Design Icons
+			position: absolute
+			top: 50%
+			right: 10px
+			font-size: 18px
+			transform: translateY(-50%)
+			color: #fff
+			border-color: #fff transparent transparent transparent 
+	select 
+		background: none!important
+		color: #ffffff!important
+		outline: none 
+		padding: 0px 10px!important
+		border: 1px solid #999999
+		border-radius: 0!important
+	select
+		display: none
+		@media (max-width: 768px)
+			display: block
+.product-wrapper
+	padding: 0 30px
+	position: relative
+	z-index: 99
+	@media (max-width: 768px)
+		padding: 0 10px
+	.title-h1-grey
+		margin-left: 30px
+		color: #ffffff
+	.box-top
+		margin-bottom: 2rem
+		.content 
+			p 
+				font-size: 18px
+				font-weight: 500
+				color: #ffffff
 		@media (max-width: 1025px)
-			.box-top
-				padding: 0 15px
+			.content
+				padding-bottom: 2rem
+		nav
+			a 
+				display: flex
+				white-space: nowrap
+				position: relative
+				flex: 0 0 50%
+				transition: all .3s ease-in-out
+				margin-bottom: 24px
+				padding-left: 30px
+				max-width: 50%
+				color: #fff
+				font-size: 18px!important
+				font-weight: 600
+				text-transform: uppercase
+				&:before 
+					position: absolute
+					width: 15px
+					height: 15px
+					background: #ffffff
+					content: ''
+					left: 0 
+					top: 50%
+					transform: translateY(-50%)
+					display: block
+					opacity: 0
+					transition: all .4s ease-in-out
+				&:hover,&.active
+					position: relative
+					color: #ffffff
+					&:before
+						opacity: 1
+		@media (max-width: 1025px)
+			nav 
+				margin: 0
+	@media (max-width: 1025px)
+		.box-top
+			padding: 0 15px

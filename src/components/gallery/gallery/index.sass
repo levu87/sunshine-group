@@ -62,7 +62,7 @@
                         &.active
                             a,span
                                 color: #ffffff
-                                background: #b72600
+                                background: #000000
                                 border: none
                         span,a
                             display: flex
@@ -88,24 +88,24 @@
             .figure-image
                 overflow: hidden
                 position: relative
-                &:after
-                    transition: opacity .7s ease-in-out
-                    font: normal normal normal 24px/1 Material Design Icons
-                    content: '\f24f'
-                    font-size: 24px   
-                    position: absolute
-                    left: 0
-                    color: #ffffff
-                    font-size: 50px
-                    bottom: 0
-                    opacity: 0
-                    pointer-events: none
-                    width: 100%
-                    height: 100%
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    background: rgba(#000000,.4)
+                // &:after
+                //     transition: opacity .7s ease-in-out
+                //     font: normal normal normal 24px/1 Material Design Icons
+                //     content: '\f24f'
+                //     font-size: 24px   
+                //     position: absolute
+                //     left: 0
+                //     color: #ffffff
+                //     font-size: 50px
+                //     bottom: 0
+                //     opacity: 0
+                //     pointer-events: none
+                //     width: 100%
+                //     height: 100%
+                //     display: flex
+                //     justify-content: center
+                //     align-items: center
+                //     background: rgba(#000000,.4)
                 &:hover
                     a
                         img
@@ -146,3 +146,18 @@
                     .title
                         *
                             font-size: 16px
+.fancybox-thumbs
+    top: auto
+    width: auto
+    bottom: 0
+    left: 0
+    right: 0
+    height: 95px
+    padding: 10px 10px 5px 10px
+    box-sizing: border-box
+    background: rgba(0, 0, 0, 0.3)
+.fancybox-show-thumbs .fancybox-inner
+    right: 0
+    bottom: 95px
+.fancybox-thumbs__list a:before 
+    border: 3px solid #8c0000

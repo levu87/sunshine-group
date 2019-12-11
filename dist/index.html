@@ -70,7 +70,7 @@
 			</section>
 		</header>
 		<main>
-			<section class="home-slider1">
+			<section class="home-slider1" data-aos="fade-right">
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
@@ -88,8 +88,8 @@
 					</div>
 				</div>
 			</section>
-			<section class="about-sunshine" setBackground="./img/aa.png">
-				<div class="about-wrapper">
+			<section class="about-sunshine">
+				<div class="about-wrapper" setBackground="./img/about-bg.png">
 					<div class="container">
 						<h1 class="title-h1-grey">about sunshine group</h1>
 						<div class="row">
@@ -161,8 +161,8 @@
 								</div>
 							</div>
 							<div class="swiper-navigation">
-								<div class="business-button-next"><em class="mdi mdi-chevron-right"></em></div>
 								<div class="business-button-prev"><em class="mdi mdi-chevron-left"></em></div>
+								<div class="business-button-next"><em class="mdi mdi-chevron-right"></em></div>
 							</div>
 						</div>
 					</div>
@@ -190,9 +190,10 @@
 									<div class="swiper-slide"> <a class="img" href="#"><img src="./img/home/product/6.png" alt=""></a><a class="product-title" href="">Bakery pizza equipment</a></div>
 								</div>
 							</div>
-							<div class="product-button-next"><em class="mdi mdi-chevron-right"></em></div>
-							<div class="product-button-prev"><em class="mdi mdi-chevron-left"></em></div>
-							<div class="swiper-pagination"></div>
+							<div class="swiper-navigation">
+								<div class="product-button-prev"><em class="mdi mdi-chevron-left"></em></div>
+								<div class="product-button-next"><em class="mdi mdi-chevron-right"></em></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -225,14 +226,16 @@
 										<div class="swiper-slide"> <a class="img" href="#"><img src="./img/home/project/2.png" alt=""></a><a class="project-title" href="">Bakery pizza equipment</a></div>
 									</div>
 								</div>
-								<div class="project-button-next"><em class="mdi mdi-chevron-right"></em></div>
-								<div class="project-button-prev"><em class="mdi mdi-chevron-left"></em></div>
+								<div class="swiper-navigation">
+									<div class="project-button-prev"><em class="mdi mdi-chevron-left"></em></div>
+									<div class="project-button-next"><em class="mdi mdi-chevron-right"></em></div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="home-news" setBackground="./img/news-bg.png">
+			<section class="home-news">
 				<div class="container"> 
 					<h1 class="title-h1-white">news </h1>
 					<div class="news-wrapper"> 
@@ -273,9 +276,10 @@
 									</div>
 								</div>
 							</div>
-							<div class="news-button-next"><em class="mdi mdi-chevron-right"></em></div>
-							<div class="news-button-prev"><em class="mdi mdi-chevron-left"></em></div>
-							<div class="swiper-pagination"></div>
+							<div class="swiper-navigation">
+								<div class="news-button-prev"><em class="mdi mdi-chevron-left"></em></div>
+								<div class="news-button-next"><em class="mdi mdi-chevron-right"></em></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -283,7 +287,7 @@
 			<section class="partner-swiper">
 				<div class="container">
 					<div class="news-title"> 
-						<h1 class="title-h1-grey">Partners </h1>
+						<h1 class="title-h1-white">Partners </h1>
 					</div>
 					<div class="partnet-swiper-wrapper">
 						<div class="navigation-partner-prev"><em class="mdi mdi-chevron-left"></em></div>
@@ -325,8 +329,6 @@
 					</div>
 				</div>
 			</section>
-		</main>
-		<footer>
 			<div class="footer-wrapper-top">
 				<div class="container">
 					<div class="row">
@@ -353,7 +355,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="footer-wrapper-bottom" setBackground="./img/footer-bg.png">
+		</main>
+		<footer setBackground="./img/footer-bg.png">
+			<div class="footer-wrapper-bottom">
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-3 col-6 nav">

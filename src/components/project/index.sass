@@ -1,15 +1,24 @@
 .project 
-    padding: 3.75rem 0
     .nav-1
-        p 
-            font-size: 18px
-            font-weight: 600
-            text-transform: uppercase
+        p
+            font-size: 18px!important
+            font-weight: 300!important
+            text-transform: unset!important
         h1 
-            font-size: 18px
-            font-weight: 300
+            margin-left: 2rem
+            font-size: 30px
+            padding-bottom: 20px
+            font-weight: 500
+            &:before
+                left: -30px
+            @media (max-width: 768px)
+                margin-left: 0
+                padding-left: 20px
+                &:before 
+                    left: 0
+                
         nav
-            padding-top: 50px
+            padding-top: 57px
             display: flex
             flex-wrap: wrap
             flex: 0 0 100%
@@ -22,6 +31,7 @@
                 max-width: 50%
                 margin-bottom: 24px
                 text-transform: uppercase
+                white-space: nowrap
                 &:before 
                     position: absolute
                     width: 15px
@@ -87,7 +97,7 @@
         .nav-2 
             display: none
     .project-1
-        padding-top: 2rem
+        padding: 2rem
         .project-list
             .swiper-container
                 @media (min-width: 1025px)
@@ -102,6 +112,8 @@
                         img
                             width: 100%
                             opacity: 1
+                        a 
+                            display: block
                     .info
                         position: absolute
                         left: 0
@@ -165,27 +177,37 @@
                     &.swiper-pagination-bullet-active
                         background: #333333
             .swiper-nav
+                position: absolute
+                top: 50%
+                transform: translate(-50%,-50%)
+                display: flex
+                z-index: 10
+                left: 50%
+                width: 82%
+                @media (max-width: 767.98px)
+                    width: 100%
+                
+                    .btn-prev,.btn-next
+                        color: #8c0000
                 .btn-prev,.btn-next
-                    position: absolute
-                    top: 50%
-                    transform: translateY(-50%)
+                    
                     font-size: 60px
                     color: #ffffff
 
                     z-index: 10
                     cursor: pointer
-                    text-shadow: 0 0 20px rgba(black,.5)
                     outline: none
                     @media (max-width: 767.98px)
                         font-size: 28px
+                    &:hover 
+                        color: #8c0000
+                        transition: all .3s ease-in-out
                 .btn-prev
-                    left: 120px
-                    @media (max-width: 767.98px)
-                        left: 30px
+                    
+                    
+                    
                 .btn-next
-                    right: 120px
-                    @media (max-width: 767.98px)
-                        right: 30px
+                    margin-left: auto
             .pages
                 margin-top: 2rem
                 .modulepager
@@ -209,7 +231,7 @@
                             &.active
                                 a,span
                                     color: #ffffff
-                                    background: #b72600
+                                    background: #000000
                                     border: none
                             span,a
                                 display: flex

@@ -1,10 +1,12 @@
 .home-news
     padding: 4rem 0
+    background: #171e26
+    .title-h1-white
+        color: #ffffff
+        font-weight: 400
     .news-wrapper 
         .news-title
             padding-bottom: 2rem
-            .title-h1
-                color: #ffffff
         .news-slider
             position: relative
             .swiper-container
@@ -27,6 +29,7 @@
                                 display: block
                                 color: #929598
                                 transition: .4s ease-in-out
+                                padding: 0
                         &:hover 
                             figcaption
                                 .news-title 
@@ -34,67 +37,44 @@
                             .img 
                                 img 
                                     transform: scale(1.10)
-            .news-button-next
-                position: absolute
-                width: 35px
-                height: 35px
+            .swiper-navigation
+                width: 110%
                 display: flex
-                justify-content: center
                 align-items: center
-                bottom: 50%
-                transform: translateY(-50%)
-                right: -3rem
-                border: none
-                outline: none
-                em 
-                    color: #999999
-                    font-size: 40px
-                    font-weight: bold
-                &:hover
-                    em
-                        color: #8c2004
-                    
-                        transition: all .3s ease-in-out
-            .news-button-prev
                 position: absolute
-                width: 35px
-                height: 35px
-                display: flex
-                justify-content: center
-                align-items: center
-                bottom: 50%
-                transform: translateY(-50%)
-                left: -3rem
-                border: none
-                outline: none
-                em 
-                    color: #999999
-                    font-size: 40px
-                    font-weight: bold
-                &:hover
-                    em
-                        color: #8c2004
-                        
-                        transition: all .3s ease-in-out
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                z-index: 99
+                .news-button-next,.news-button-prev
+                    width: 35px
+                    height: 35px
+                    display: flex
+                    border: none
+                    outline: none
+                    em 
+                        color: #999999
+                        font-size: 40px
+                        font-weight: bold
+                    &:hover 
+                        em
+                            color: #8c2004
+                            transition: all .4s ease-in-out
+                .news-button-next 
+                    margin-left: auto
+                @media (max-width: 992px)
+                    top: 110%
+                    width: 50px
+
             .swiper-pagination 
                 display: none
-                position: absolute
-                bottom: -3rem
-                left: 50%
-                transform: translateX(-50%)
-                span
-                    width: 10px
-                    height: 10px
-                    opacity: 1
-                    border-radius: 0px
-                    margin: 0 5px
-                    background: #999999
-                    position: static
-                    &.swiper-pagination-bullet-active
-                        background: #8c0000
             @media (max-width: 876px)
-                .news-button-next,.news-button-prev
-                    display: none
-                .swiper-pagination 
+                .news-button-next
                     display: block
+                    bottom: -2rem
+                    right: 35%
+                .news-button-prev
+                    display: block
+                    bottom: -2rem
+                    left: 35%
                 

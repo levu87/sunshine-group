@@ -8,7 +8,7 @@
 	.contact-information-wrapper
 		background-size: unset!important
 		padding: 50px 30px
-		height: 487px
+		height: 427px
 		overflow-y: auto
 		&::-webkit-scrollbar
         	width: 3px
@@ -17,10 +17,7 @@
 		&::-webkit-scrollbar-thumb
 			background: #8c0000
 		@media screen and(max-width:1200px)
-			padding: 30px 20px
-		@media screen and(max-width:576px)
-			padding: 20px  0
-			background: none
+			padding: 40px 30px
 	h1
 		font-size: 20px
 		color: #ffffff
@@ -52,9 +49,17 @@
 		.icon
 			flex: 0 0 20%
 			max-width: 20%
+
 		.caption
 			flex:  0 0 80%
 			max-width: 80%
+		@media (max-width: 768px)
+			.icon
+				flex: 0 0 15%
+				max-width: 15%
+			.caption 
+				flex: 0 0 85%
+				max-width: 85%
 		.address
 			display: flex
 			justify-content: center
@@ -80,10 +85,11 @@
 				text-decoration: underline
 	.form-wrapper
 		padding-left: 20px
+
 		h2
 			font-size: 30px
-			color: #989e99
-			font-weight: 300
+			color: #333333
+			font-weight: 500
 			text-transform: uppercase
 			line-height: 32px
 			margin-bottom: 16px
@@ -105,7 +111,18 @@
 			h3
 				margin-left: -10px
 
-		.wrap-form
+		.wrap-form>div
+			display: flex
+			flex-wrap: wrap
+			margin-left: -15px
+			@media (max-width: 1200px)
+				display: -webkit-box
+				display: flex
+				flex-wrap: wrap
+				margin-right: -15px
+				margin-left: -15px
+				
+			
 		.frm-btn-reset
 			display: none
 		.frm-btnwrap
@@ -114,6 +131,7 @@
 			align-items: center
 		.form-group
 			margin-bottom: 16px
+		
 			span
 				display: none
 			label
@@ -140,71 +158,81 @@
 					outline: none
 		.frm-btn
 			margin-top: 16px
-			vertical-align: middle
-			transform: perspective(1px) translateZ(0)
-			transition-duration: .3s
-			transition-property: transform
 			margin-bottom: 15px
+			margin-left: 15px
 			cursor: pointer
 			display: inline-flex
 			justify-content: center
 			align-items: center
 			padding: 4px 40px
+			width: 125px
+			height: 35px
 			background: none
 			color: #ffffff
-			background: #8c0000
-			transition: .3s all ease-in-out
-			vertical-align: middle
-			transform: perspective(1px) translateZ(0)
+			background: #292e35
+			
 			box-shadow: 0 0 1px rgba(0, 0, 0, 0)
 			position: relative
-			transition-property: color
-			transition-duration: 0.5s
-			z-index: 120
+
 			&:before
-				content: ""
+				content: ''
 				position: absolute
-				z-index: -1
 				top: 0
-				left: 0
-				right: 0
 				bottom: 0
-				background: #333333
-				transform: scaleX(0)
-				transform-origin: 0 50%
-				transition-property: transform
-				transition-duration: 0.5s
-				transition-timing-function: ease-out
+				right: 0
+				width: 3px
+				background-color: #8c0000
+				transform-origin: center
+				transform: scaleY(0)
+				transition: transform 0.5s ease
+			&:after
+				content: 'SEND'
+				color: #ffffff 
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
 			&:hover
+				&:before
+					transform: scaleY(1)
 				input[type='submit']
 					color: white
 					z-index: 125
 
-				&:before
-					-webkit-transform: scaleX(1)
-					transform: scaleX(1)
-					-webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
-					transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+				// &:before
+				// 	-webkit-transform: scaleX(1)
+				// 	transform: scaleX(1)
+				// 	-webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+				// 	transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
 			input[type='submit']
 				padding: 0
 				text-transform: uppercase
 				color: #ffffff
 				border: none
 				background: none
+				font-size: 0
 				&:focus
 					outline: none
 			em
 				padding-left: 8px
 				color: #fff
 				font-size: 16px
-		@media screen and(max-width:1025px)
-			padding-bottom: 20px
-		@media screen and(max-width: 576px)
-			.form-group
-				padding: 4px 15px 4px 0
-				input,textarea
-					padding: 8px 16px
-		@media screen and(max-width: 450px)
-			.form-group
-				input,textarea
-					padding: 8px 16px
+	@media (max-width: 1025px)
+		.form-wrapper
+			padding: 0 15px!important
+			h2,h3 
+				margin-left: 0
+		// @media screen and(max-width:1025px)
+		// 	padding-bottom: 20px
+		// @media screen and(max-width: 576px)
+		// 	.form-group
+		// 		padding: 4px 15px 4px 0
+		// 		input,textarea
+		// 			padding: 8px 16px
+		// @media screen and(max-width: 450px)
+		// 	.form-group
+		// 		input,textarea
+		// 			padding: 8px 16px
+.Contact-page
+	.footer-wrapper-top
+		display: none

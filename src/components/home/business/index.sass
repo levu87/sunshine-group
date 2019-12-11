@@ -1,7 +1,11 @@
 .business
-    padding-bottom: 6rem
+    padding: 4rem 0
+    background: #171e26
+    position: relative
+    z-index: 9
     .title-h1-grey
         margin-bottom: 2rem!important
+        color: #ffffff
     .business-wrapper
         .business-slider
             position: relative
@@ -12,13 +16,13 @@
                         position: relative
                         display: inline-block
                         border: 0
-                        -webkit-transition: all 200ms ease-in
+                        -webkit-transition: all 400ms ease-in
                         -webkit-transform: scale(1) 
-                        -ms-transition: all 200ms ease-in
+                        -ms-transition: all 400ms ease-in
                         -ms-transform: scale(1) 
-                        -moz-transition: all 200ms ease-in
+                        -moz-transition: all 400ms ease-in
                         -moz-transform: scale(1)
-                        transition: all 200ms ease-in
+                        transition: all 400ms ease-in
                         transform: scale(1)   
                         .img 
                             width: 100%
@@ -49,87 +53,74 @@
                                 width: 170px
                                 height: 40px
                                 background: #ffffff
-                                border: 2px solid #ffffff
+                                font-size: 14px
                                 color: #8c2004
-                                font-weight: bold
+                                font-weight: 500
                                 text-transform: uppercase
                                 em 
                                     margin-left: 10px
                                     color: #8c2004
                                 &:hover
-                                    border: 2px solid #8c2004
-                                
                                     transition: all .38s ease-in-out
                                     em
-                                      
-                        
                         @media (max-width: 992px)
                             .slider-text
                                 padding: 0 10px
                         &:hover 
                             // box-shadow: 0px 0px 50px #000000
                             z-index: 999
-                            -webkit-transition: all 200ms ease-in
+                            -webkit-transition: all 400ms ease-in
                             -webkit-transform: scale(1.2)
-                            -ms-transition: all 200ms ease-in
+                            -ms-transition: all 400ms ease-in
                             -ms-transform: scale(1.2)
-                            -moz-transition: all 200ms ease-in
+                            -moz-transition: all 400ms ease-in
                             -moz-transform: scale(1.2)
-                            transition: all 200ms ease-in
+                            transition: all 400ms ease-in
                             transform: scale(1.2)
                             
                             .slider-text
                                 .detail-btn
                                     display: flex
             .swiper-navigation
+                width: 110%
+                display: flex
+                align-items: center
                 position: absolute
-                width: 100%
-                bottom: 50%
-                transform: translateY(-50%)
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                z-index: 99
+                .business-button-next,.business-button-prev
+                    width: 35px
+                    height: 35px
+                    display: flex
+                    border: none
+                    outline: none
+                    em 
+                        color: #999999
+                        font-size: 40px
+                        font-weight: bold
+                    &:hover 
+                        em
+                            color: #8c2004
+                            transition: all .4s ease-in-out
+                .business-button-next 
+                    margin-left: auto
+                @media (max-width: 992px)
+                    top: 110%
+                    width: 50px
+
+            .swiper-pagination 
+                display: none
+            @media (max-width: 876px)
                 .business-button-next
-                    position: absolute
-                    width: 35px
-                    height: 35px
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    bottom: 0
-                    right: -3rem
-                    border: none
-                    outline: none
-                    em 
-                        color: #999999
-                        font-size: 40px
-                        font-weight: bold
-                    &:hover 
-                        em 
-                            color: #8c0000
-                            transition: all .4s ease-in-out
+                    display: block
+                    bottom: -2rem
+                    right: 35%
                 .business-button-prev
-                    position: absolute
-                    width: 35px
-                    height: 35px
-                    display: flex
-                    justify-content: center
-                    align-items: center
-                    bottom: 0
-                    left: -3rem
-                    border: none
-                    outline: none
-                    em 
-                        color: #999999
-                        font-size: 40px
-                        font-weight: bold
-                    &:hover 
-                        em 
-                            transition: all .4s ease-in-out
-                            color: #8c0000
-            @media screen and (max-width: 876px) 
-                .swiper-navigation
-                    bottom: -4rem
-                    width: 0px
-                    left: 50%
-                    transform: translateX(-50%)
+                    display: block
+                    bottom: -2rem
+                    left: 35%
 @media (max-width: 768px)
     .business-wrapper
         padding: 0rem 2rem

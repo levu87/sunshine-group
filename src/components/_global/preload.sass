@@ -1,0 +1,61 @@
+#overlay
+    position: fixed
+    z-index: 99999
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    background: #ffffff
+    transition: 1s 0.4s
+
+#progress
+    position: absolute 
+    top: 45%
+    left: 50%
+    transform: translate(-50%,-50%)
+.logo-loader
+    max-width: 150px
+    height: auto 
+#overlay
+    .progstat-wrapper
+        // color: #000
+        // font-size: 18px
+        // letter-spacing: 3px
+        // // position: absolute
+        // // top: 50%
+        // margin-top: 20px
+        // width: 100%
+        // text-align: center
+        animation-name: animateBar
+        animation-iteration-count: 1
+        animation-timing-function: ease-in
+        animation-duration: .4s
+        position: relative
+        display: inline-block
+        height: 2px
+        background: #8c0000
+        -ms-transition: all .4s linear
+        transition: all .4s linear
+        .div
+            display: inline-block
+            position: absolute
+            top: 3px
+            right: 0
+            color: #333
+    .loader
+        // height: 100%
+        // display: flex
+        // justify-content: center
+        // align-items: center
+        // flex-direction: column
+        position: absolute
+        top: 45%
+        left: 50%
+        transform: translate(-50%,-50%)
+    @keyframes animateBar 
+        0% 
+            width: 0%
+            // transform: translateX(-100%)
+        100% 
+            width: 100%
+            // transform: translateX(0)

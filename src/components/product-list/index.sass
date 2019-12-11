@@ -1,5 +1,7 @@
 .product-by-category 
-    background: #262c32
+    background: #171e26
+    @media (max-width: 768px)
+        padding: 0 10px
     .product-by-category-wrapper
         padding: 2rem 0
 
@@ -80,11 +82,18 @@
                         padding: 0 0 10px 0
     .product-wrapper
         display: none
+        flex: 0 0 100%
+        max-width: 100%
+        flex-wrap: wrap
         margin: 20px 0
         .product-item-category
             padding: 0 10px
             flex:  0 0 25%
             max-width: 25%
+            white-space: nowrap
+            @media (max-width: 992px)
+                flex: 0 0 50%
+                max-width: 50%
             .figure-image
                 position: relative    
                 .button-viewall
@@ -122,12 +131,12 @@
                                 border-bottom: 1.5px solid #8c0000
             .figure-image
                 position: relative
-                padding: 20px 20px 0 20px
+                // padding: 20px 20px 0 20px
                 margin-bottom: 16px
                 > a
                     display: block
                     height: 200px
-                    padding: 20px
+                    // padding: 20px
                     width: auto
                     img
                         width: 100%
