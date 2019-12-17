@@ -4,9 +4,13 @@
     <xsl:template match="/">
         <section class="home-news">
 				<div class="container"> 
-					<h1 class="title-h1-white"><xsl:value-of disable-output-escaping="yes" select="/NewsList/ModuleTitle"></xsl:value-of></h1>
+					<h1 class="title-h1-white" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"><xsl:value-of disable-output-escaping="yes" select="/NewsList/ModuleTitle"></xsl:value-of></h1>
 					<div class="news-wrapper"> 
-						<div class="news-slider"> 
+						<div class="news-slider" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500"> 
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
 									<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>

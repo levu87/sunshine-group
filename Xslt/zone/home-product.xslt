@@ -4,15 +4,21 @@
     <xsl:template match="/">
         <section class="home-product">
 				<div class="container"> 
-					<h1 class="title-h1-white"><xsl:value-of disable-output-escaping="yes" select="/ZoneList/ModuleTitle"></xsl:value-of></h1>
+					<h1 class="title-h1-white" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500"><xsl:value-of disable-output-escaping="yes" select="/ZoneList/ModuleTitle"></xsl:value-of></h1>
 					<div class="product-wrapper">
-						<div class="product-slider1">
+						<div class="product-slider1" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
 							<div class="row">
                                 <xsl:apply-templates select="/ZoneList/Zone" mode="Top"></xsl:apply-templates>
 								
 							</div>
 						</div>
-						<div class="product-slider2">
+						<div class="product-slider2" data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
 							<div class="swiper-container">
 								<div class="swiper-wrapper">
 									

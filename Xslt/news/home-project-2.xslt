@@ -2,7 +2,9 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 <xsl:output method="html" indent="yes"/>
     <xsl:template match="/">
-        <div class="project-slider">
+        <div class="project-slider" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
             <div class="row"> 
                 <div class="swiper-container">
                     <div class="swiper-wrapper">

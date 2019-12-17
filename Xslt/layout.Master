@@ -188,7 +188,7 @@ Facebook: https://fb.com/canhcam.vn
 							
 						</div>
 						<div class="group-link-wrapper">
-							<div class="group-link-wrapper"><a href="#"><img src="./img/cart-white.png" alt=""><span>Sunshine Shop</span></a></div>
+							<div class="group-link-wrapper"><a href="#"><span>Sunshine Shop</span></a></div>
 							<div class="group-link-wrapper"></div>
 						</div>
 					</div>
@@ -268,9 +268,9 @@ Facebook: https://fb.com/canhcam.vn
 							
 						</div>
 					</div>
-                    <a class="contact-button-wrapper" href="tel:0919170173">
-                    <div class="ic"><em class="mdi mdi-phone"></em></div>
-                </a>
+                    
+                    <portal:modulewrapper id="mdl203" runat="server" configuremoduleid="203"/>
+
 				</div>
 			</div>
 		</footer>

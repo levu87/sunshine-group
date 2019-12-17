@@ -608,9 +608,6 @@ function menuMobile() {
 function Aos() {
   AOS.init({
     duration: 1200,
-    once: true,
-    disable: 'phone',
-    offset: 400,
   });
 }
 

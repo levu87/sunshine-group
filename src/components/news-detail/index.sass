@@ -102,3 +102,21 @@
 .news-detail-page
     .pagination 
         display: none
+    .e-profile-title
+        text-transform: uppercase
+        font-size: 30px
+        color: #333333
+        padding-bottom: 30px
+        position: relative
+        padding-left: 20px
+        font-weight: 500
+        &:before
+            content: "/"
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+        @media screen and(max-width:1441px)
+            padding-bottom: 20px
+        @media screen and(max-width:1025px)
+            font-size: 24px
