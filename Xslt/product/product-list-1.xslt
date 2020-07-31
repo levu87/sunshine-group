@@ -5,7 +5,7 @@
         <section class="product-list1 product-zone ajaxresponse product-page clearfix">
 				<div class="heading">
 					<div class="container">
-						<div class="order-by sort clearfix"> <span>Sort </span>
+						<div class="order-by sort clearfix"> <span><xsl:value-of disable-output-escaping="yes" select="/ProductList/SortText"></xsl:value-of> </span>
 							<div class="custom-select sort-amount sort-by">
 								<select class="ajaxsort"> 
 									<xsl:apply-templates select="/ProductList/SortBy"></xsl:apply-templates>

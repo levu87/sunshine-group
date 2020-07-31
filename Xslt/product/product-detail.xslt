@@ -3,6 +3,7 @@
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/">
+
 		<section class="product-information-detail">
 			<div class="container">
 				<div class="row">
@@ -32,6 +33,8 @@
 								<p class="title">
 									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/Title">
 									</xsl:value-of>
+									<xsl:value-of select="/ProductDetail/EditLink" disable-output-escaping="yes">
+									</xsl:value-of>
 								</p><strong class="code">
 									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/Code">
 									</xsl:value-of>
@@ -48,26 +51,43 @@
 												<xsl:text disable-output-escaping="yes">/contact</xsl:text>
 											</xsl:attribute>
 
-											<xsl:text disable-output-escaping="yes">Contact</xsl:text>
+											<xsl:value-of disable-output-escaping="yes"
+												select="/ProductDetail/ContactText"></xsl:value-of>
 										</a></div>
 									<div class="buy-button"><a>
-								
-									<xsl:attribute name="href">
-										<xsl:value-of select="SubTitle"></xsl:value-of>
-									</xsl:attribute>
-									<xsl:text disable-output-escaping="yes">Buy</xsl:text>
-								
-									</a>
+
+											<xsl:attribute name="target">
+												<xsl:text>_blank</xsl:text>
+											</xsl:attribute>
+
+
+											<xsl:attribute name="href">
+												<xsl:value-of disable-output-escaping="yes"
+													select="/ProductDetail/SubTitle">
+												</xsl:value-of>
+											</xsl:attribute>
+
+
+											<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/BuyText">
+											</xsl:value-of>
+
+										</a>
 									</div>
 								</div>
 								<div class="social-network-wrapper">
-									<p>Share</p>
+									<p>
+										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/ShareText">
+										</xsl:value-of>
+									</p>
 									<div class="social-button">
 										<a>
+											<xsl:attribute name="target">
+												<xsl:text>_blank</xsl:text>
+											</xsl:attribute>
 											<xsl:attribute name="href">
 												<xsl:text>https://www.facebook.com/sharer/sharer.php?u=</xsl:text>
+												<xsl:value-of select="/ProductDetail/FullUrl"></xsl:value-of>
 											</xsl:attribute>
-
 											<em class="fab fa-facebook-f"></em>
 										</a></div>
 								</div>
@@ -80,12 +100,33 @@
 				<div class="tab-navigation-wrapper">
 					<div class="container">
 						<ul>
-							<li class="active"><a href="javascript:void(0)" data-type="tab-1">Product information</a>
+							<li class="active"><a href="javascript:void(0)" data-type="tab-1">
+									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/SpecsText">
+									</xsl:value-of>
+								</a>
 							</li>
-							<li><a href="javascript:void(0)" data-type="tab-2">Download Document</a></li>
-							<li><a href="javascript:void(0)" data-type="tab-3">Product Family</a></li>
-							<li><a href="javascript:void(0)" data-type="tab-4">Accessories</a></li>
-							<li><a href="javascript:void(0)" data-type="tab-5">Gallery</a></li>
+							<li><a href="javascript:void(0)" data-type="tab-2">
+									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/DownloadText">
+									</xsl:value-of>
+								</a></li>
+							<xsl:if test="count(/ProductDetail/ProductRelated)>0">
+								<li><a href="javascript:void(0)" data-type="tab-3">
+										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/PFamilyText">
+										</xsl:value-of>
+									</a></li>
+							</xsl:if>
+							<xsl:if test="count(/ProductDetail/ProductRelated2)>0">
+								<li><a href="javascript:void(0)" data-type="tab-4">
+										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/AccesText">
+										</xsl:value-of>
+									</a></li>
+							</xsl:if>
+							<xsl:if test="count(/ProductDetail/NewsRelated)>0">
+								<li><a href="javascript:void(0)" data-type="tab-5">
+										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/GalleryText">
+										</xsl:value-of>
+									</a></li>
+							</xsl:if>
 						</ul>
 					</div>
 				</div>
@@ -98,37 +139,43 @@
 
 
 						</div>
-						<div class="tab-item" id="tab-2">
-							<div class="download-file">
+						<xsl:apply-templates select='/ProductDetail/ProductAttributes' mode='Content'>
+						</xsl:apply-templates>
 
-								<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/BriefContent">
-								</xsl:value-of>
-
-							</div>
-						</div>
-						<div class="tab-item" id="tab-3">
-							<div class="product-family">
-								<div class="row product-wrapper">
-									<xsl:apply-templates select="/ProductDetail/ProductRelated"></xsl:apply-templates>
+						<xsl:if test="count(/ProductDetail/ProductRelated)>0">
+							<div class="tab-item" id="tab-3">
+								<div class="product-family">
+									<div class="row product-wrapper">
+										<xsl:apply-templates select="/ProductDetail/ProductRelated">
+										</xsl:apply-templates>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="tab-item" id="tab-4">
-							<div class="access">
-								<div class="list-item">
-									<xsl:apply-templates select="/ProductDetail/ProductRelated2"></xsl:apply-templates>
+						</xsl:if>
+						<xsl:if test="count(/ProductDetail/ProductRelated2)>0">
+							<div class="tab-item" id="tab-4">
+								<div class="access">
+									<div class="list-item">
+										<xsl:apply-templates select="/ProductDetail/ProductRelated2">
+										</xsl:apply-templates>
 
 
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="tab-item" id="tab-5">
-							<div class="gallery">
-								<div class="row">
-									<xsl:apply-templates select="/ProductDetail/NewsRelated"></xsl:apply-templates>
+						</xsl:if>
+						<xsl:if test="count(/ProductDetail/NewsRelated)>0">
+							<div class="tab-item" id="tab-5">
+								<div class="gallery">
+									<div class="container">
+										<div class="row">
+											<xsl:apply-templates select="/ProductDetail/NewsRelated">
+											</xsl:apply-templates>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						</xsl:if>
 					</div>
 				</div>
 			</div>
@@ -136,7 +183,10 @@
 				<div class="others-project">
 					<div class="white-title-bg-grey">
 						<div class="container">
-							<p>Similar product</p>
+							<p>
+								<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/PSimilartext">
+								</xsl:value-of>
+							</p>
 						</div>
 					</div>
 					<div class="container">
@@ -151,17 +201,32 @@
 		</section>
 	</xsl:template>
 	<xsl:template match="ProductAttributes" mode="mode-1">
-		<!-- <tr>
-											<td><xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of></td>
-											<td><xsl:value-of disable-output-escaping="yes" select="Content"></xsl:value-of></td>
-										</tr> -->
-		<xsl:value-of disable-output-escaping="yes" select="Content"></xsl:value-of>
+		<xsl:if test="position()=1">
+
+
+			<xsl:value-of disable-output-escaping="yes" select="Content"></xsl:value-of>
+		</xsl:if>
 	</xsl:template>
+
+	<xsl:template match='ProductAttributes' mode='Content'>
+		<xsl:if test='position() &gt; 1 and position() &lt; 3'>
+			<div class="tab-item" id="tab-2">
+				<div class="download-file">
+					<xsl:value-of select='Content' disable-output-escaping='yes'></xsl:value-of>
+				</div>
+			</div>
+		</xsl:if>
+	</xsl:template>
+
 	<xsl:template match="NewsRelated">
 		<div class="col-sm-6 col-lg-3">
 			<div class="figure-lightgallery">
 				<div class="figure-image lightgallery">
-					<a data-fancybox="image">
+					<a>
+						<xsl:attribute name="data-fancybox">
+							<xsl:text>gallery-</xsl:text>
+							<xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
+						</xsl:attribute>
 						<xsl:attribute name="href">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
@@ -179,16 +244,20 @@
 						</img>
 					</a>
 				</div>
+				<div class="hidden" style='display:none;'>
+					<xsl:apply-templates select="NewsImages">
+						<xsl:with-param select="position()" name="NewsPosition" />
+					</xsl:apply-templates>
+				</div>
 				<figcaption>
 					<p class="title">
 						<a>
-							<xsl:attribute name="href">
-								<xsl:value-of select="Url"></xsl:value-of>
-							</xsl:attribute>
+
 							<xsl:attribute name="title">
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
 							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+							<xsl:value-of select="/NewsDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
 						</a>
 					</p>
 				</figcaption>
@@ -352,4 +421,32 @@
 			</div>
 		</div>
 	</xsl:template>
+
+	<xsl:template match="NewsImages">
+		<xsl:param name="NewsPosition"></xsl:param>
+		<xsl:if test="position()>1">
+			<a>
+				<xsl:attribute name="data-fancybox">
+					<xsl:text>gallery-</xsl:text>
+					<xsl:value-of disable-output-escaping="yes" select="$NewsPosition"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="href">
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="Title">
+					<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+				</xsl:attribute>
+
+				<img>
+				<xsl:attribute name="src">
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="alt">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
+				</img>
+			</a>
+		</xsl:if>
+	</xsl:template>
+
 </xsl:stylesheet>

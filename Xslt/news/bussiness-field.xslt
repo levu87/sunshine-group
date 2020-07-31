@@ -12,7 +12,7 @@
 			</section>
     </xsl:template>
     <xsl:template match="News">
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-3 col-md-6">
             <div class="business-item"><a>
             
                 <xsl:attribute name="href">
@@ -32,10 +32,12 @@
                                 <xsl:value-of select="Title"></xsl:value-of>
                             </xsl:attribute>
                             </img>
+							<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                         </div>
                         <div class="info">
                             <p>
                                 <xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of>
+								<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                             </p>
                         </div>
                     </article></a></div>

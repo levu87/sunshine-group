@@ -29,7 +29,7 @@
                     <xsl:attribute name="title">
                         <xsl:value-of select="Title"></xsl:value-of>
                     </xsl:attribute>
-                    <xsl:text disable-output-escaping="yes">View all</xsl:text>
+            <xsl:value-of disable-output-escaping="yes" select="/ZoneList/VMAllText"></xsl:value-of>
             </a></div>
 
             <div class="row product-wrapper active">

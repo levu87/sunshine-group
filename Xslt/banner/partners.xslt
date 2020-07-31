@@ -10,7 +10,7 @@
                                 <xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
 								
 							</div>
-							<div class="view-more-brand"><a><span>View more</span><em class="mdi mdi-chevron-down"></em></a></div>
+							<div class="view-more-brand"><a><span><xsl:value-of disable-output-escaping="yes" select="/BannerList/VMText"></xsl:value-of></span><em class="mdi mdi-chevron-down"></em></a></div>
 						</div>
 					</div>
 				</div>

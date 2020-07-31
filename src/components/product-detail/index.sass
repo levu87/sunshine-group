@@ -1,5 +1,5 @@
 .product-information-detail
-	padding-top: 3.3rem 
+	padding-top: 3.3rem
 	.title-h1-grey
 		margin-left: 2rem
 	.swiper-wrapper
@@ -231,13 +231,13 @@
 	padding: 20px 0
 	.tab-item
 		display: none
+		text-align: left
 		&.active
 			display: block
 		p
 			font-size: 16px
-			color: #b2b2b2
-			font-weight: 400
 			margin-bottom: 16px
+			color: #b2b2b2
 		img
 			display: block
 			text-align: center
@@ -249,18 +249,20 @@
 				color: #b2b2b2
 	.download-file
 		padding: 10px 0
-		*
-			color: #8a1f0e
 		a
+			transition: .3s all  ease-in-out
 			display: flex
 			justify-content: flex-start
 			align-items: center
 			color: #b2b2b2
 			text-decoration: underline
-			em
 			&:hover 
 				color: #ffffff 
 				cursor: pointer
+		img
+			max-width: 100%
+			height: auto
+			margin: 16px auto 16px 0
 	.tong-quan 
 		margin-top: 20px
 		.image 
@@ -318,7 +320,7 @@
 			&:last-child
 				td
 					&:last-child
-						font-weight: 700
+						font-weight: 400
 			&:first-child
 				td
 					padding: 0  0 8px 0
@@ -433,12 +435,12 @@
 			&:after
 				transition: opacity .7s ease-in-out
 				font: normal normal normal 24px/1 Material Design Icons
-				content: '\f40d'
+				content: '\f2e9'
 				font-size: 24px   
 				position: absolute
 				left: 0
 				color: #ffffff
-				font-size: 50px
+				font-size: 40px
 				bottom: 0
 				opacity: 0
 				pointer-events: none
@@ -486,7 +488,7 @@
 					line-height: 27px
 .others-project
 	background: #171e26
-	padding-bottom: 20px
+	padding-bottom: 2rem
 	.white-title-bg-grey
 		margin-bottom: 30px
 		padding: 16px

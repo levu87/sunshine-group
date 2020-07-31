@@ -99,3 +99,176 @@
 .canhcam.homepage.vi-vn
 	.footer-wrapper-top
 		display: block
+.call-action
+	position: fixed
+	bottom: 18pt
+	left: 18pt
+	z-index: 121
+	.toggle-number
+		overflow: hidden
+		opacity: 0
+		transition: .7s all ease-in-out
+		cursor: none
+		pointer-events: none
+		position: absolute
+		border-radius: 10px 25px 25px 10px
+		left: 0
+		background: #ffffff
+		color: #054950
+		width: 0
+		z-index: -1
+		padding: 13px 35px
+	@media screen and(max-width:1025px)
+		display: flex
+		height: 50px
+		justify-content: center
+		align-items: center
+		left: 0
+		width: 100vw
+		bottom: 0
+		background: #333333
+		justify-content: space-around
+		.toggle-number
+			display: none !important
+		a
+			border: none !important
+			background: none !important
+			margin: 0 !important
+			em
+			&:not(:last-child)
+				margin: 0 !important
+			&:before
+				display: none !important
+	@media screen and(max-width:576px)
+		display: flex
+	a
+		text-decoration: none
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 50px
+		border-radius: 50%
+		height: 50px
+		background: #ffffff
+		position: relative
+		@media screen and(max-width:415px)
+			&:not(:first-child)
+				margin-left: 60px
+		@media screen and(max-width:376px)
+			&:not(:first-child)
+				margin-left: 50px
+		@media screen and(max-width:321px)
+			&:not(:first-child)
+				margin-left: 25px
+		&:nth-child(1)
+			background: #054950
+			border: 1px solid #054950
+			&:before
+				animation-delay: 0.2s
+				background:rgba( #054950,.3) !important
+		&:nth-child(2)
+			background: #4FCE5D
+			&:before
+				animation-delay: .75s
+				background: rgba(#4FCE5D, .3) !important
+			.toggle-number
+				background: #4FCE5D !important
+				color: #ffffff !important
+			em
+				color: #ffffff
+				position: relative
+				z-index: 11
+				font-size: 25px
+		&:nth-child(3)
+			display: none
+			white-space: nowrap
+			@media screen and(max-width:1025px)
+				display: flex
+			&:before
+				animation-delay: 1.5s
+			.toggle-number
+				width: auto !important
+				&:hover
+					.toggle-number
+						width: auto
+			em
+				color: #b2b2b2
+		@media screen and(min-width:1025px)
+			&:hover
+				.toggle-number
+					left: 50%
+					cursor: pointer
+					pointer-events: auto
+					opacity: 1
+					width: 155px
+					overflow: hidden
+		&:not(:last-child)
+			margin-bottom: 15px
+		&:before
+			z-index: -1
+			content: ''
+			width: 100%
+			height: 100%
+			border-radius: 50%
+			position: absolute
+			background: rgba(#ffffff, .3)
+			top: 50%
+			transform: translate(-50% , -50%)
+			left: 50%
+			// animation-timing-function: linear
+			animation-name: 
+			animation: circle 2.5s ease-in-out infinite
+		em
+			color: #ffffff
+			position: relative
+			z-index: 11
+			font-size: 25px
+			@media screen and(max-width:1025px)
+				color: #ffffff !important
+.circle
+	overflow: hidden
+	position: relative
+	&:before
+		position: absolute
+		top: 50%
+		left: 50%
+		z-index: 2
+		display: block
+		content: ''
+		width: 0
+		height: 0
+		background: rgba(255,255,255,.2)
+		border-radius: 100%
+		-webkit-transform: translate(-50%, -50%)
+		transform: translate(-50%, -50%)
+		opacity: 0
+	&:hover
+		&:before
+			animation: circle .75s
+			@-webkit-keyframes circle
+				0%
+					opacity: 1
+
+				40%
+					opacity: 1
+
+				100%
+					width: 140%
+					height: 140%
+					opacity: 0
+
+
+			@keyframes circle
+				0%
+					opacity: 1
+
+				40%
+					opacity: 1
+
+				100%
+					width: 140%
+					height: 140%
+					opacity: 0
+#fb-root
+	@media screen and(max-width:576px)
+		display: none

@@ -10,7 +10,8 @@
 								<time><xsl:value-of disable-output-escaping="yes" select="/NewsDetail/CreatedDate"></xsl:value-of></time>
                                 
                                 <span class="type-1">
-                                Internal News
+                                <xsl:value-of disable-output-escaping="yes" select="/NewsDetail/InternalNewsText">
+                                </xsl:value-of>
                                 </span>
                                             <!-- <span class="type-1">
                                                <xsl:choose>
@@ -33,12 +34,16 @@
                                        -->
                                 
 								<h1 class="big-title"><xsl:value-of disable-output-escaping="yes" select="/NewsDetail/Title"></xsl:value-of></h1>
+								<xsl:value-of select="/NewsDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
 								<div class="full-content">
 									<xsl:value-of disable-output-escaping="yes" select="/NewsDetail/FullContent"></xsl:value-of>
 								</div>
 								<div class="social-share">
                                 <a class="fb" href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank"><em class="mdi mdi-facebook"></em>
-                                <span>Share on Facebook</span>
+                                <span>
+                                	<xsl:value-of disable-output-escaping="yes" select="/NewsDetail/ShareFB">
+                                	</xsl:value-of>
+                                </span>
                                 </a>
                                 <a class="mail" href="#"><em class="mdi mdi-email"></em></a></div>
 							</div>
@@ -48,7 +53,7 @@
                             <xsl:if test="count(/NewsDetail/NewsOther) &gt; 0">
 
                                 <div class="other-news">
-								<h2 class="big-title">Latest news</h2>
+								<h2 class="big-title"><xsl:value-of disable-output-escaping="yes" select="/NewsDetail/LatestNewsText"></xsl:value-of></h2>
 								<xsl:apply-templates select="/NewsDetail/NewsOther"></xsl:apply-templates>
 								
 							</div>
@@ -71,6 +76,7 @@
                     <xsl:value-of select="Title"></xsl:value-of>
                 </xsl:attribute>
                 <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+				<xsl:value-of select="/NewsDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
                 </a>
             </h3>
         </div>

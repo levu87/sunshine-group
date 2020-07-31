@@ -5,7 +5,7 @@
         <section class="career-job"> 
 				<div class="career-1">
 					<div class="container">
-						<h2 class="big-title">Job Opening</h2>
+						<h2 class="big-title"><xsl:value-of disable-output-escaping="yes" select="/NewsList/JobText"></xsl:value-of></h2>
 						<div class="row">
                             <xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 							
@@ -28,6 +28,7 @@
                         <xsl:value-of select="Title"></xsl:value-of>
                     </xsl:attribute>
                     <xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+					<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
                     </a>
                 </h3><span><xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of></span>
             </div>
